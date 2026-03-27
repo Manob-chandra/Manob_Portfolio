@@ -8,3 +8,13 @@ body {
 h1 {
   color: #1e3a5f;
 }
+
+h2 {
+  color: #234;
+  margin-top: 30px;
+}
+
+p {
+  font-size: 18px;
+  line-height: 1.6;
+}
