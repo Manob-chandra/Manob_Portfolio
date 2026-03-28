@@ -216,7 +216,59 @@ body {
   color: #4f5b67;
   text-align: justify;
   text-justify: inter-word;
-  max-width: 1150px;
+}
+
+.research-section {
+  margin-top: 34px;
+}
+
+.research-heading-icon {
+  color: #6f42c1;
+  font-size: 20px;
+}
+
+.focus-box {
+  background: #eef4fb;
+  border-left: 4px solid #1e88e5;
+  border-radius: 6px;
+  padding: 22px 28px;
+}
+
+.focus-label {
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: 1.4px;
+  color: #1565c0;
+  margin-bottom: 16px;
+  text-transform: uppercase;
+}
+
+.focus-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.focus-tag {
+  display: inline-flex;
+  align-items: center;
+  padding: 10px 18px;
+  border: 1px solid #8bbcf3;
+  border-radius: 999px;
+  background: #ffffff;
+  color: #1565c0;
+  font-size: 15px;
+  font-weight: 500;
+  transition: all 0.25s ease;
+  cursor: pointer;
+}
+
+.focus-tag:hover {
+  background: #1565c0;
+  color: #ffffff;
+  border-color: #1565c0;
+  transform: translateY(-1px);
+  box-shadow: 0 6px 14px rgba(21, 101, 192, 0.18);
 }
 
 @media (max-width: 900px) {
