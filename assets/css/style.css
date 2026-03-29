@@ -6,6 +6,14 @@ body {
   color: #333;
 }
 
+* {
+  box-sizing: border-box;
+}
+
+img {
+  max-width: 100%;
+}
+
 .top-nav {
   position: sticky;
   top: 0;
@@ -23,6 +31,7 @@ body {
   font-size: 18px;
   color: #333;
   font-weight: 500;
+  white-space: nowrap;
 }
 
 .nav-links {
@@ -51,6 +60,7 @@ body {
   border-radius: 6px;
   font-weight: 600;
   font-size: 14px;
+  white-space: nowrap;
 }
 
 .page-layout {
@@ -116,11 +126,14 @@ body {
   justify-content: center;
   gap: 10px;
   font-size: 15px;
+  flex-wrap: wrap;
+  word-break: break-word;
 }
 
 .contact-line a {
   text-decoration: none;
   color: #333;
+  word-break: break-word;
 }
 
 .email-icon {
@@ -180,23 +193,24 @@ body {
 .main-content {
   flex: 1;
   background: white;
-  padding: 40px 50px;
+  padding: 34px 40px;
   min-height: calc(100vh - 64px);
+  overflow-x: hidden;
 }
 
 .main-content h1 {
-  font-size: 44px;
+  font-size: 38px;
   color: #1f3b5b;
-  margin-bottom: 12px;
+  margin-bottom: 10px;
   line-height: 1.2;
 }
 
 .subtitle {
-  font-size: 17px;
+  font-size: 15px;
   color: #5f6772;
-  margin-bottom: 34px;
-  line-height: 1.8;
-  max-width: 1100px;
+  margin-bottom: 28px;
+  line-height: 1.75;
+  max-width: 1050px;
 }
 
 .bio-section {
@@ -207,9 +221,9 @@ body {
   display: flex;
   align-items: center;
   gap: 10px;
-  font-size: 22px;
+  font-size: 20px;
   color: #1f3b5b;
-  margin-bottom: 18px;
+  margin-bottom: 16px;
   padding-bottom: 12px;
   border-bottom: 1px solid #d9d9d9;
 }
@@ -218,39 +232,39 @@ body {
 .research-heading-icon,
 .academic-heading-icon {
   color: #6f42c1;
-  font-size: 20px;
+  font-size: 18px;
 }
 
 .experience-heading-icon {
   color: #8d5a63;
-  font-size: 20px;
+  font-size: 18px;
 }
 
 .bio-text {
-  font-size: 16px;
-  line-height: 2;
+  font-size: 15px;
+  line-height: 1.9;
   color: #4f5b67;
   text-align: justify;
   text-justify: inter-word;
 }
 
 .research-section {
-  margin-top: 34px;
+  margin-top: 30px;
 }
 
 .focus-box {
   background: #eef4fb;
   border-left: 4px solid #1e88e5;
   border-radius: 6px;
-  padding: 22px 28px;
+  padding: 20px 24px;
 }
 
 .focus-label {
-  font-size: 14px;
+  font-size: 13px;
   font-weight: 700;
   letter-spacing: 1.4px;
   color: #1565c0;
-  margin-bottom: 16px;
+  margin-bottom: 14px;
   text-transform: uppercase;
 }
 
@@ -263,12 +277,12 @@ body {
 .focus-tag {
   display: inline-flex;
   align-items: center;
-  padding: 10px 18px;
+  padding: 9px 16px;
   border: 1px solid #8bbcf3;
   border-radius: 999px;
   background: #ffffff;
   color: #1565c0;
-  font-size: 15px;
+  font-size: 14px;
   font-weight: 500;
   transition: all 0.25s ease;
   cursor: pointer;
@@ -283,14 +297,14 @@ body {
 }
 
 .experience-section {
-  margin-top: 42px;
+  margin-top: 36px;
 }
 
 .experience-card {
   background: #ffffff;
   border: 1px solid #dddddd;
   border-radius: 12px;
-  padding: 22px 24px;
+  padding: 20px 22px;
   margin-bottom: 18px;
   transition: box-shadow 0.28s ease, transform 0.28s ease;
 }
@@ -311,7 +325,7 @@ body {
   display: inline-block;
   background: #78909c;
   color: white;
-  font-size: 13px;
+  font-size: 12px;
   font-weight: 700;
   letter-spacing: 0.5px;
   padding: 6px 12px;
@@ -323,7 +337,7 @@ body {
   display: flex;
   align-items: center;
   gap: 10px;
-  font-size: 20px;
+  font-size: 18px;
   font-weight: 700;
   color: #1f3b5b;
   margin-bottom: 10px;
@@ -331,11 +345,11 @@ body {
 
 .experience-title-icon {
   color: #7a7aa8;
-  font-size: 18px;
+  font-size: 17px;
 }
 
 .experience-org {
-  font-size: 15px;
+  font-size: 14px;
   color: #5f6772;
   line-height: 1.8;
   max-width: 820px;
@@ -344,15 +358,15 @@ body {
 .experience-time {
   background: #2196f3;
   color: white;
-  font-size: 14px;
+  font-size: 13px;
   font-weight: 700;
-  padding: 10px 18px;
+  padding: 10px 16px;
   border-radius: 999px;
   white-space: nowrap;
 }
 
 .academic-section {
-  margin-top: 42px;
+  margin-top: 36px;
 }
 
 .academic-card {
@@ -362,7 +376,7 @@ body {
   background: #ffffff;
   border: 1px solid #dddddd;
   border-radius: 12px;
-  padding: 20px 24px;
+  padding: 18px 22px;
   margin-bottom: 18px;
   transition: box-shadow 0.28s ease, transform 0.28s ease;
 }
@@ -381,7 +395,7 @@ body {
   align-items: center;
   justify-content: center;
   color: white;
-  font-size: 28px;
+  font-size: 24px;
   font-weight: 700;
   line-height: 1;
   margin-top: 2px;
@@ -404,7 +418,7 @@ body {
 }
 
 .academic-level {
-  font-size: 12px;
+  font-size: 11px;
   font-weight: 700;
   letter-spacing: 1.2px;
   color: #9a948d;
@@ -412,16 +426,17 @@ body {
 }
 
 .academic-title {
-  font-size: 19px;
+  font-size: 17px;
   font-weight: 700;
   color: #1f3b5b;
   margin-bottom: 10px;
 }
 
 .academic-place {
-  font-size: 15px;
+  font-size: 14px;
   color: #5f6772;
   margin-bottom: 14px;
+  line-height: 1.7;
 }
 
 .academic-meta {
@@ -432,7 +447,7 @@ body {
 }
 
 .result-text {
-  font-size: 16px;
+  font-size: 15px;
   font-weight: 700;
   color: #1f7a31;
 }
@@ -443,7 +458,7 @@ body {
   justify-content: center;
   padding: 7px 12px;
   border-radius: 999px;
-  font-size: 14px;
+  font-size: 13px;
   font-weight: 700;
 }
 
@@ -458,14 +473,14 @@ body {
 }
 
 .research-page-section {
-  margin-top: 48px;
+  margin-top: 42px;
 }
 
 .research-page-title {
-  font-size: 56px;
+  font-size: 44px;
   font-weight: 700;
   color: #1f3b5b;
-  margin: 0 0 22px 0;
+  margin: 0 0 18px 0;
   line-height: 1.1;
 }
 
@@ -473,16 +488,16 @@ body {
   display: flex;
   align-items: center;
   gap: 12px;
-  font-size: 22px;
+  font-size: 20px;
   color: #1f3b5b;
-  margin: 0 0 20px 0;
+  margin: 0 0 18px 0;
   padding-bottom: 14px;
   border-bottom: 1px solid #d9d9d9;
 }
 
 .research-subtitle-icon {
   color: #7a7aa8;
-  font-size: 22px;
+  font-size: 20px;
 }
 
 .research-grid {
@@ -497,7 +512,7 @@ body {
   border: 1px solid #dddddd;
   border-top: 4px solid var(--accent);
   border-radius: 12px;
-  padding: 24px 20px 20px;
+  padding: 22px 18px 18px;
   transition: box-shadow 0.28s ease, transform 0.28s ease;
 }
 
@@ -507,21 +522,21 @@ body {
 }
 
 .research-card-icon {
-  font-size: 32px;
+  font-size: 28px;
   color: var(--accent);
-  margin-bottom: 16px;
+  margin-bottom: 14px;
 }
 
 .research-card-title {
-  font-size: 18px;
+  font-size: 17px;
   line-height: 1.45;
   color: #1f3b5b;
-  margin: 0 0 14px 0;
+  margin: 0 0 12px 0;
 }
 
 .research-card-text {
-  font-size: 15px;
-  line-height: 1.9;
+  font-size: 14px;
+  line-height: 1.8;
   color: #5f6772;
   margin: 0 0 16px 0;
   text-align: justify;
@@ -536,12 +551,12 @@ body {
 .research-keyword {
   display: inline-flex;
   align-items: center;
-  padding: 8px 14px;
+  padding: 8px 13px;
   border: 1px solid #d8d8d8;
   border-radius: 999px;
   background: #f6f6f6;
   color: #666666;
-  font-size: 14px;
+  font-size: 13px;
   font-weight: 500;
   transition: all 0.25s ease;
 }
@@ -576,9 +591,13 @@ body {
   .research-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
+
+  .main-content {
+    padding: 30px 28px;
+  }
 }
 
-@media (max-width: 900px) {
+@media (max-width: 992px) {
   .page-layout {
     flex-direction: column;
   }
@@ -590,18 +609,23 @@ body {
     height: auto;
     border-right: none;
     border-bottom: 1px solid #ddd;
+    overflow: visible;
   }
 
   .main-content {
-    padding: 30px 20px;
+    width: 100%;
+    min-height: auto;
+    padding: 28px 20px;
   }
 
-  .main-content h1 {
-    font-size: 32px;
+  .top-nav {
+    padding: 12px 16px;
+    gap: 12px;
   }
 
-  .research-page-title {
-    font-size: 38px;
+  .nav-links {
+    width: 100%;
+    gap: 10px 12px;
   }
 
   .cv-btn {
@@ -616,15 +640,137 @@ body {
     align-self: flex-start;
   }
 
-  .academic-card {
-    padding: 18px 16px;
+  .research-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 768px) {
+  .main-content h1 {
+    font-size: 30px;
   }
 
-  .academic-title {
-    font-size: 17px;
+  .subtitle {
+    font-size: 14px;
+    line-height: 1.7;
+  }
+
+  .section-heading {
+    font-size: 18px;
+  }
+
+  .research-page-title {
+    font-size: 34px;
+  }
+
+  .research-subtitle {
+    font-size: 18px;
   }
 
   .research-grid {
     grid-template-columns: 1fr;
+  }
+
+  .profile-image {
+    width: 150px;
+    height: 150px;
+  }
+
+  .profile-card h2 {
+    font-size: 20px;
+  }
+
+  .side-links a {
+    font-size: 15px;
+  }
+
+  .academic-card {
+    padding: 16px 14px;
+  }
+
+  .academic-title {
+    font-size: 16px;
+  }
+
+  .bio-text,
+  .experience-org,
+  .academic-place,
+  .research-card-text {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 576px) {
+  .top-nav {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .brand {
+    font-size: 17px;
+  }
+
+  .nav-links {
+    width: 100%;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  .nav-links a {
+    font-size: 14px;
+  }
+
+  .cv-btn {
+    font-size: 13px;
+    padding: 9px 14px;
+  }
+
+  .main-content {
+    padding: 24px 14px;
+  }
+
+  .main-content h1 {
+    font-size: 26px;
+  }
+
+  .subtitle {
+    font-size: 13.5px;
+  }
+
+  .section-heading {
+    font-size: 17px;
+  }
+
+  .focus-box,
+  .experience-card,
+  .academic-card,
+  .research-card {
+    padding-left: 14px;
+    padding-right: 14px;
+  }
+
+  .focus-tag,
+  .research-keyword,
+  .meta-badge {
+    font-size: 12px;
+  }
+
+  .academic-number {
+    width: 38px;
+    height: 38px;
+    min-width: 38px;
+    font-size: 20px;
+  }
+
+  .research-page-title {
+    font-size: 30px;
+  }
+
+  .research-card-title {
+    font-size: 16px;
+  }
+
+  .contact-line {
+    font-size: 14px;
   }
 }
