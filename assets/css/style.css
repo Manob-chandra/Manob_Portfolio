@@ -413,3 +413,87 @@ body {
     font-size: 17px;
   }
 }
+
+.experience-section {
+  margin-top: 42px;
+}
+
+.experience-heading-icon {
+  color: #8d5a63;
+  font-size: 20px;
+}
+
+.experience-card {
+  background: #ffffff;
+  border: 1px solid #dddddd;
+  border-radius: 12px;
+  padding: 22px 24px;
+  margin-bottom: 18px;
+  transition: box-shadow 0.28s ease, transform 0.28s ease;
+}
+
+.experience-card:hover {
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.08);
+  transform: translateY(-2px);
+}
+
+.experience-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 20px;
+}
+
+.experience-badge {
+  display: inline-block;
+  background: #78909c;
+  color: white;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  padding: 6px 12px;
+  border-radius: 999px;
+  margin-bottom: 14px;
+}
+
+.experience-title {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 20px;
+  font-weight: 700;
+  color: #1f3b5b;
+  margin-bottom: 10px;
+}
+
+.experience-title-icon {
+  color: #7a7aa8;
+  font-size: 18px;
+}
+
+.experience-org {
+  font-size: 15px;
+  color: #5f6772;
+  line-height: 1.8;
+  max-width: 820px;
+}
+
+.experience-time {
+  background: #2196f3;
+  color: white;
+  font-size: 14px;
+  font-weight: 700;
+  padding: 10px 18px;
+  border-radius: 999px;
+  white-space: nowrap;
+}
+
+@media (max-width: 900px) {
+  .experience-header {
+    flex-direction: column;
+  }
+
+  .experience-time {
+    align-self: flex-start;
+  }
+}
