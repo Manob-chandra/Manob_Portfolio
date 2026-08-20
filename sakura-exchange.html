@@ -1,1 +1,5050 @@
+<!DOCTYPE html>
+<html lang="en">
 
+<head>
+
+  <meta charset="UTF-8" />
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  />
+
+  <meta
+    name="description"
+    content="Manob Chandra Chanda's seven-day Sakura Science Exchange Program journey at the University of Yamanashi, Japan."
+  />
+
+  <title>
+    Sakura Science Exchange Program |
+    Manob Chandra Chanda
+  </title>
+
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+  />
+
+
+  <style>
+
+    :root {
+
+      --navy: #1f3b5b;
+
+      --navy-2: #294f78;
+
+      --text: #253241;
+
+      --muted: #647180;
+
+      --soft: #f5f8fb;
+
+      --line: #dce5ee;
+
+      --white: #ffffff;
+
+      --pink: #d85c8b;
+
+      --pink-dark: #b8436e;
+
+      --pink-soft: #fff1f6;
+
+      --blue-soft: #edf5fd;
+
+      --shadow:
+        0 14px 36px
+        rgba(31, 59, 91, 0.10);
+
+      --shadow-hover:
+        0 22px 48px
+        rgba(31, 59, 91, 0.16);
+
+      --radius: 18px;
+
+      --max: 1180px;
+    }
+
+
+    * {
+      box-sizing: border-box;
+    }
+
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+
+    body {
+
+      margin: 0;
+
+      font-family:
+        Arial,
+        Helvetica,
+        sans-serif;
+
+      color: var(--text);
+
+      background: #f7f9fc;
+
+      line-height: 1.75;
+
+      font-size: 17px;
+    }
+
+
+    img {
+
+      max-width: 100%;
+
+      display: block;
+    }
+
+
+    a {
+      color: inherit;
+    }
+
+
+    button,
+    a {
+
+      -webkit-tap-highlight-color:
+        transparent;
+    }
+
+
+    /* ===================================
+       Top reading progress
+       =================================== */
+
+    .progress-bar {
+
+      position: fixed;
+
+      top: 0;
+
+      left: 0;
+
+      height: 4px;
+
+      width: 0;
+
+      z-index: 3000;
+
+      background:
+        linear-gradient(
+          90deg,
+          var(--pink),
+          #e890b1
+        );
+
+      box-shadow:
+        0 0 12px
+        rgba(216, 92, 139, .25);
+    }
+
+
+    .container {
+
+      width:
+        min(
+          92%,
+          var(--max)
+        );
+
+      margin:
+        0 auto;
+    }
+
+
+    /* ===================================
+       Top Navigation
+       =================================== */
+
+    .topbar {
+
+      position: sticky;
+
+      top: 0;
+
+      z-index: 2000;
+
+      background:
+        rgba(
+          255,
+          255,
+          255,
+          .93
+        );
+
+      backdrop-filter:
+        blur(12px);
+
+      border-bottom:
+        1px solid
+        rgba(
+          220,
+          229,
+          238,
+          .95
+        );
+    }
+
+
+    .topbar-row {
+
+      min-height: 66px;
+
+      display: flex;
+
+      align-items: center;
+
+      justify-content:
+        space-between;
+
+      gap: 20px;
+    }
+
+
+    .brand {
+
+      font-weight: 800;
+
+      color: var(--navy);
+
+      text-decoration: none;
+
+      white-space: nowrap;
+    }
+
+
+    .back-link {
+
+      display: inline-flex;
+
+      align-items: center;
+
+      gap: 8px;
+
+      text-decoration: none;
+
+      color: #ffffff;
+
+      background:
+        var(--navy);
+
+      padding:
+        9px 14px;
+
+      border-radius: 8px;
+
+      font-weight: 700;
+
+      font-size: 14px;
+
+      transition:
+        .25s ease;
+    }
+
+
+    .back-link:hover {
+
+      background:
+        var(--navy-2);
+
+      transform:
+        translateY(-1px);
+    }
+
+
+    /* ===================================
+       Hero
+       =================================== */
+
+    .hero {
+
+      --mx: 50%;
+      --my: 22%;
+
+      position: relative;
+
+      overflow: hidden;
+
+      padding:
+        78px 0 56px;
+
+      background:
+
+        radial-gradient(
+          500px circle
+          at var(--mx) var(--my),
+          rgba(216, 92, 139, .13),
+          transparent 64%
+        ),
+
+        linear-gradient(
+          145deg,
+          #ffffff 0%,
+          #f2f6fb 64%,
+          #fff4f8 100%
+        );
+
+      border-bottom:
+        1px solid var(--line);
+    }
+
+
+    .hero::before {
+
+      content: "";
+
+      position: absolute;
+
+      width: 320px;
+
+      height: 320px;
+
+      border-radius: 50%;
+
+      right: -120px;
+
+      top: -120px;
+
+      border:
+        42px solid
+        rgba(216, 92, 139, .06);
+
+      pointer-events: none;
+    }
+
+
+    .hero-inner {
+
+      position: relative;
+
+      z-index: 1;
+
+      max-width: 930px;
+    }
+
+
+    .eyebrow {
+
+      display: inline-flex;
+
+      align-items: center;
+
+      gap: 8px;
+
+      background:
+        var(--pink-soft);
+
+      color:
+        var(--pink-dark);
+
+      padding:
+        8px 13px;
+
+      border-radius: 999px;
+
+      font-weight: 800;
+
+      font-size: 13px;
+
+      letter-spacing: .8px;
+
+      text-transform:
+        uppercase;
+
+      margin-bottom: 18px;
+    }
+
+
+    .hero h1 {
+
+      margin:
+        0 0 14px;
+
+      color:
+        var(--navy);
+
+      font-size:
+        clamp(
+          38px,
+          6vw,
+          64px
+        );
+
+      line-height: 1.08;
+
+      letter-spacing:
+        -1.2px;
+    }
+
+
+    .hero-subtitle {
+
+      margin:
+        0 0 22px;
+
+      color: #536171;
+
+      max-width: 850px;
+
+      font-size:
+        clamp(
+          18px,
+          2.1vw,
+          22px
+        );
+
+      line-height: 1.65;
+    }
+
+
+    .hero-tags {
+
+      display: flex;
+
+      flex-wrap: wrap;
+
+      gap: 10px;
+
+      margin:
+        0 0 26px;
+    }
+
+
+    .hero-tags span {
+
+      background: #ffffff;
+
+      border:
+        1px solid
+        var(--line);
+
+      color:
+        var(--navy);
+
+      padding:
+        8px 12px;
+
+      border-radius:
+        999px;
+
+      font-size: 14px;
+
+      font-weight: 700;
+    }
+
+
+    .hero-actions {
+
+      display: flex;
+
+      flex-wrap: wrap;
+
+      gap: 12px;
+    }
+
+
+    .btn {
+
+      display: inline-flex;
+
+      align-items: center;
+
+      justify-content: center;
+
+      gap: 9px;
+
+      padding:
+        11px 17px;
+
+      border-radius: 9px;
+
+      text-decoration: none;
+
+      font-weight: 800;
+
+      font-size: 14px;
+
+      transition:
+        transform .25s ease,
+        box-shadow .25s ease,
+        background .25s ease;
+    }
+
+
+    .btn-primary {
+
+      background:
+        var(--navy);
+
+      color: #ffffff;
+
+      box-shadow:
+        0 9px 20px
+        rgba(31, 59, 91, .16);
+    }
+
+
+    .btn-primary:hover {
+
+      background:
+        var(--navy-2);
+
+      transform:
+        translateY(-2px);
+
+      box-shadow:
+        0 12px 26px
+        rgba(31, 59, 91, .22);
+    }
+
+
+    .btn-secondary {
+
+      background: #ffffff;
+
+      color:
+        var(--navy);
+
+      border:
+        1px solid
+        var(--line);
+    }
+
+
+    .btn-secondary:hover {
+
+      border-color:
+        #b9c8d8;
+
+      transform:
+        translateY(-2px);
+    }
+
+
+    /* ===================================
+       Day Navigation
+       =================================== */
+
+    .journey-nav-wrap {
+
+      position: sticky;
+
+      top: 66px;
+
+      z-index: 1800;
+
+      background:
+        rgba(
+          247,
+          249,
+          252,
+          .94
+        );
+
+      backdrop-filter:
+        blur(10px);
+
+      border-bottom:
+        1px solid
+        var(--line);
+    }
+
+
+    .journey-nav {
+
+      display: flex;
+
+      gap: 8px;
+
+      overflow-x: auto;
+
+      padding:
+        11px 0;
+
+      scrollbar-width:
+        thin;
+    }
+
+
+    .journey-nav a {
+
+      flex:
+        0 0 auto;
+
+      text-decoration: none;
+
+      padding:
+        7px 11px;
+
+      border-radius:
+        999px;
+
+      border:
+        1px solid
+        var(--line);
+
+      background:
+        #ffffff;
+
+      color:
+        #506071;
+
+      font-size:
+        13px;
+
+      font-weight: 800;
+
+      transition:
+        .22s ease;
+    }
+
+
+    .journey-nav a:hover,
+    .journey-nav a.active {
+
+      color:
+        #ffffff;
+
+      background:
+        var(--navy);
+
+      border-color:
+        var(--navy);
+
+      transform:
+        translateY(-1px);
+    }
+
+
+    /* ===================================
+       General sections
+       =================================== */
+
+    .section {
+
+      padding:
+        64px 0;
+
+      scroll-margin-top:
+        128px;
+    }
+
+
+    .section:nth-of-type(even) {
+
+      background:
+        #ffffff;
+    }
+
+
+    .section-head {
+
+      max-width: 900px;
+
+      margin-bottom: 28px;
+    }
+
+
+    .section-kicker {
+
+      display: inline-flex;
+
+      align-items: center;
+
+      gap: 8px;
+
+      color:
+        var(--pink-dark);
+
+      font-weight: 800;
+
+      font-size: 13px;
+
+      letter-spacing: .7px;
+
+      text-transform:
+        uppercase;
+
+      margin-bottom: 8px;
+    }
+
+
+    .section h2 {
+
+      margin:
+        0 0 11px;
+
+      color:
+        var(--navy);
+
+      font-size:
+        clamp(
+          28px,
+          4vw,
+          42px
+        );
+
+      line-height: 1.2;
+    }
+
+
+    .section-intro {
+
+      margin: 0;
+
+      color:
+        var(--muted);
+
+      font-size: 17px;
+
+      line-height: 1.85;
+
+      max-width: 900px;
+    }
+
+
+    /* ===================================
+       Overview Prime Image
+       =================================== */
+
+    .overview-card {
+
+      display: grid;
+
+      grid-template-columns:
+        1.16fr .84fr;
+
+      overflow: hidden;
+
+      background: #ffffff;
+
+      border:
+        1px solid
+        var(--line);
+
+      border-radius:
+        var(--radius);
+
+      box-shadow:
+        var(--shadow);
+    }
+
+
+    .overview-image {
+
+      min-height: 450px;
+
+      overflow: hidden;
+    }
+
+
+    .overview-image img {
+
+      width: 100%;
+
+      height: 100%;
+
+      min-height: 450px;
+
+      object-fit: cover;
+
+      transition:
+        transform .65s
+        cubic-bezier(.2, .7, .2, 1);
+    }
+
+
+    .overview-card:hover
+    .overview-image img {
+
+      transform:
+        scale(1.025);
+    }
+
+
+    .overview-content {
+
+      padding: 32px;
+
+      display: flex;
+
+      flex-direction:
+        column;
+
+      justify-content:
+        center;
+    }
+
+
+    .overview-content h3 {
+
+      margin:
+        0 0 12px;
+
+      color:
+        var(--navy);
+
+      font-size: 28px;
+
+      line-height: 1.3;
+    }
+
+
+    .overview-content p {
+
+      margin:
+        0 0 14px;
+
+      color:
+        var(--muted);
+    }
+
+
+    .overview-facts {
+
+      display: grid;
+
+      grid-template-columns:
+        1fr 1fr;
+
+      gap: 10px;
+
+      margin-top: 10px;
+    }
+
+
+    .fact {
+
+      padding:
+        12px 13px;
+
+      border-radius: 11px;
+
+      background:
+        var(--soft);
+
+      border:
+        1px solid
+        #e4ebf2;
+    }
+
+
+    .fact strong {
+
+      display: block;
+
+      color:
+        var(--navy);
+
+      font-size: 13px;
+
+      margin-bottom: 3px;
+    }
+
+
+    .fact span {
+
+      color:
+        #617080;
+
+      font-size: 13px;
+
+      line-height: 1.5;
+    }
+
+
+    /* ===================================
+       Story Cards
+       =================================== */
+
+    .story-grid {
+
+      display: grid;
+
+      grid-template-columns:
+        repeat(
+          2,
+          minmax(0, 1fr)
+        );
+
+      gap: 22px;
+    }
+
+
+    .story-grid.three {
+
+      grid-template-columns:
+        repeat(
+          3,
+          minmax(0, 1fr)
+        );
+    }
+
+
+    .story-card {
+
+      position: relative;
+
+      overflow: hidden;
+
+      background: #ffffff;
+
+      border:
+        1px solid
+        var(--line);
+
+      border-radius:
+        var(--radius);
+
+      box-shadow:
+        var(--shadow);
+
+      transition:
+        box-shadow .28s ease,
+        border-color .28s ease;
+    }
+
+
+    .story-card:hover {
+
+      border-color:
+        #c7d5e3;
+
+      box-shadow:
+        var(--shadow-hover);
+    }
+
+
+    .story-card.featured {
+
+      grid-column:
+        1 / -1;
+
+      display: grid;
+
+      grid-template-columns:
+        1.18fr .82fr;
+
+      align-items:
+        stretch;
+    }
+
+
+    .story-image {
+
+      background:
+        #eef3f7;
+
+      overflow: hidden;
+
+      cursor:
+        zoom-in;
+    }
+
+
+    .story-image img {
+
+      width: 100%;
+
+      height: 315px;
+
+      object-fit: cover;
+
+      transition:
+
+        transform .55s
+        cubic-bezier(.2, .7, .2, 1),
+
+        filter .3s ease;
+    }
+
+
+    .story-card:hover
+    .story-image img {
+
+      transform:
+        scale(1.035);
+
+      filter:
+        saturate(1.04);
+    }
+
+
+    .story-card.featured
+    .story-image img {
+
+      height: 100%;
+
+      min-height: 405px;
+    }
+
+
+    /* Media screenshots need full view */
+
+    .media-shot
+    .story-image {
+
+      background:
+        #f1f3f6;
+
+      padding: 10px;
+    }
+
+
+    .media-shot
+    .story-image img {
+
+      height: 410px;
+
+      object-fit: contain;
+
+      border-radius: 10px;
+    }
+
+
+    .story-body {
+
+      padding:
+        21px 22px 23px;
+    }
+
+
+    .story-body h3 {
+
+      margin:
+        0 0 9px;
+
+      color:
+        var(--navy);
+
+      font-size: 20px;
+
+      line-height: 1.4;
+    }
+
+
+    .story-body p {
+
+      margin: 0;
+
+      color:
+        var(--muted);
+
+      font-size: 16px;
+
+      line-height: 1.8;
+    }
+
+
+    /* ===================================
+       Learning box
+       =================================== */
+
+    .learning {
+
+      margin-top: 16px;
+
+      padding:
+        13px 14px;
+
+      border:
+        1px solid
+        #f0d3df;
+
+      background:
+        var(--pink-soft);
+
+      border-radius: 11px;
+    }
+
+
+    .learning-title {
+
+      display: flex;
+
+      align-items: center;
+
+      gap: 7px;
+
+      margin-bottom: 5px;
+
+      color:
+        var(--pink-dark);
+
+      font-weight: 800;
+
+      font-size: 13px;
+
+      letter-spacing:
+        .45px;
+
+      text-transform:
+        uppercase;
+    }
+
+
+    .learning p {
+
+      color:
+        #694a57;
+
+      font-size: 15px;
+
+      line-height: 1.7;
+    }
+
+
+    /* ===================================
+       Major Day Closing Quote
+       =================================== */
+
+    .day-quote {
+
+      margin-top: 24px;
+
+      padding:
+        18px 20px;
+
+      background:
+        #ffffff;
+
+      border:
+        1px solid
+        var(--line);
+
+      border-left:
+        4px solid
+        var(--pink);
+
+      border-radius: 11px;
+
+      color:
+        var(--navy);
+
+      font-weight: 700;
+
+      box-shadow:
+        0 8px 22px
+        rgba(31, 59, 91, .07);
+    }
+
+
+    /* ===================================
+       Day 4 Research continuation
+       =================================== */
+
+    .research-bridge {
+
+      margin-top: 24px;
+
+      display: grid;
+
+      grid-template-columns:
+        auto 1fr;
+
+      gap: 18px;
+
+      align-items: start;
+
+      padding: 20px;
+
+      border-radius: 14px;
+
+      background:
+        linear-gradient(
+          135deg,
+          var(--blue-soft),
+          #f8fbff
+        );
+
+      border:
+        1px solid
+        #d5e5f5;
+    }
+
+
+    .research-bridge-icon {
+
+      width: 48px;
+
+      height: 48px;
+
+      border-radius: 50%;
+
+      display: grid;
+
+      place-items: center;
+
+      background:
+        var(--navy);
+
+      color:
+        #ffffff;
+
+      font-size: 20px;
+    }
+
+
+    .research-bridge h3 {
+
+      margin:
+        0 0 7px;
+
+      color:
+        var(--navy);
+
+      font-size: 20px;
+    }
+
+
+    .research-bridge p {
+
+      margin: 0;
+
+      color:
+        var(--muted);
+
+      font-size: 16px;
+    }
+
+
+    /* ===================================
+       Final takeaways
+       =================================== */
+
+    .takeaway-grid {
+
+      display: grid;
+
+      grid-template-columns:
+        repeat(
+          4,
+          minmax(0, 1fr)
+        );
+
+      gap: 15px;
+
+      margin-top: 26px;
+    }
+
+
+    .takeaway {
+
+      padding: 19px;
+
+      background:
+        #ffffff;
+
+      border:
+        1px solid
+        var(--line);
+
+      border-radius: 14px;
+
+      box-shadow:
+        0 8px 20px
+        rgba(31, 59, 91, .06);
+    }
+
+
+    .takeaway i {
+
+      color:
+        var(--pink-dark);
+
+      font-size: 22px;
+
+      margin-bottom: 10px;
+    }
+
+
+    .takeaway h3 {
+
+      margin:
+        0 0 7px;
+
+      color:
+        var(--navy);
+
+      font-size: 17px;
+    }
+
+
+    .takeaway p {
+
+      margin: 0;
+
+      color:
+        var(--muted);
+
+      font-size: 14px;
+
+      line-height: 1.7;
+    }
+
+
+    .final-reflection {
+
+      padding: 32px;
+
+      border-radius: 18px;
+
+      background:
+        linear-gradient(
+          135deg,
+          var(--navy),
+          #315b87
+        );
+
+      color:
+        #ffffff;
+
+      margin-top: 28px;
+    }
+
+
+    .final-reflection h3 {
+
+      margin:
+        0 0 10px;
+
+      font-size: 26px;
+    }
+
+
+    .final-reflection p {
+
+      margin: 0;
+
+      font-size: 17px;
+
+      line-height: 1.8;
+
+      color:
+        rgba(
+          255,
+          255,
+          255,
+          .92
+        );
+    }
+
+
+    /* ===================================
+       Footer
+       =================================== */
+
+    .footer {
+
+      padding:
+        38px 0 50px;
+
+      background:
+        #ffffff;
+
+      border-top:
+        1px solid
+        var(--line);
+    }
+
+
+    .footer-row {
+
+      display: flex;
+
+      justify-content:
+        space-between;
+
+      align-items: center;
+
+      gap: 20px;
+
+      flex-wrap: wrap;
+    }
+
+
+    .footer p {
+
+      margin: 0;
+
+      color:
+        var(--muted);
+
+      font-size: 14px;
+    }
+
+
+    /* ===================================
+       JS reveal
+       =================================== */
+
+    .reveal {
+
+      opacity: 0;
+
+      transform:
+        translateY(20px);
+
+      transition:
+
+        opacity .7s ease,
+
+        transform .7s ease;
+    }
+
+
+    .reveal.visible {
+
+      opacity: 1;
+
+      transform:
+        translateY(0);
+    }
+
+
+    /* ===================================
+       JS tilt
+       =================================== */
+
+    .tilt-card {
+
+      transform-style:
+        preserve-3d;
+
+      will-change:
+        transform;
+
+      transition:
+
+        transform .18s ease,
+
+        box-shadow .28s ease;
+    }
+
+
+    /* ===================================
+       Back to top
+       =================================== */
+
+    .back-to-top {
+
+      position: fixed;
+
+      right: 22px;
+
+      bottom: 22px;
+
+      width: 46px;
+
+      height: 46px;
+
+      border-radius: 50%;
+
+      border: 0;
+
+      background:
+        var(--navy);
+
+      color:
+        #ffffff;
+
+      cursor: pointer;
+
+      z-index: 1700;
+
+      box-shadow:
+        0 10px 24px
+        rgba(31, 59, 91, .24);
+
+      opacity: 0;
+
+      visibility: hidden;
+
+      transform:
+        translateY(10px);
+
+      transition:
+        .25s ease;
+    }
+
+
+    .back-to-top.show {
+
+      opacity: 1;
+
+      visibility: visible;
+
+      transform:
+        translateY(0);
+    }
+
+
+    .back-to-top:hover {
+
+      background:
+        var(--pink-dark);
+
+      transform:
+        translateY(-2px);
+    }
+
+
+    /* ===================================
+       Image Lightbox
+       =================================== */
+
+    .lightbox {
+
+      position: fixed;
+
+      inset: 0;
+
+      z-index: 5000;
+
+      display: none;
+
+      align-items: center;
+
+      justify-content: center;
+
+      padding: 24px;
+
+      background:
+        rgba(
+          10,
+          17,
+          28,
+          .88
+        );
+
+      backdrop-filter:
+        blur(7px);
+    }
+
+
+    .lightbox.open {
+
+      display: flex;
+    }
+
+
+    .lightbox-inner {
+
+      position: relative;
+
+      max-width:
+        min(
+          94vw,
+          1280px
+        );
+
+      max-height: 90vh;
+
+      display: flex;
+
+      flex-direction: column;
+
+      align-items: center;
+
+      gap: 10px;
+    }
+
+
+    .lightbox img {
+
+      max-width: 100%;
+
+      max-height: 80vh;
+
+      object-fit: contain;
+
+      border-radius: 10px;
+
+      box-shadow:
+        0 20px 60px
+        rgba(0, 0, 0, .4);
+    }
+
+
+    .lightbox-caption {
+
+      color:
+        #ffffff;
+
+      text-align: center;
+
+      font-size: 14px;
+
+      max-width: 850px;
+    }
+
+
+    .lightbox-close {
+
+      position: absolute;
+
+      top: -18px;
+
+      right: -18px;
+
+      width: 42px;
+
+      height: 42px;
+
+      border: 0;
+
+      border-radius: 50%;
+
+      background:
+        #ffffff;
+
+      color:
+        var(--navy);
+
+      cursor: pointer;
+
+      font-size: 18px;
+
+      box-shadow:
+        0 8px 20px
+        rgba(0, 0, 0, .25);
+    }
+
+
+    /* ===================================
+       Responsive
+       =================================== */
+
+    @media (max-width: 1000px) {
+
+      .overview-card {
+
+        grid-template-columns:
+          1fr;
+      }
+
+
+      .overview-image,
+      .overview-image img {
+
+        min-height: 360px;
+      }
+
+
+      .story-grid.three {
+
+        grid-template-columns:
+          1fr 1fr;
+      }
+
+
+      .takeaway-grid {
+
+        grid-template-columns:
+          1fr 1fr;
+      }
+    }
+
+
+    @media (max-width: 760px) {
+
+      body {
+
+        font-size: 16px;
+      }
+
+
+      .topbar-row {
+
+        min-height: 60px;
+      }
+
+
+      .journey-nav-wrap {
+
+        top: 60px;
+      }
+
+
+      .brand {
+
+        font-size: 14px;
+      }
+
+
+      .back-link {
+
+        font-size: 13px;
+
+        padding:
+          8px 11px;
+      }
+
+
+      .hero {
+
+        padding:
+          58px 0 42px;
+      }
+
+
+      .section {
+
+        padding:
+          48px 0;
+
+        scroll-margin-top:
+          118px;
+      }
+
+
+      .story-grid,
+      .story-grid.three,
+      .story-card.featured {
+
+        grid-template-columns:
+          1fr;
+      }
+
+
+      .story-card.featured {
+
+        display: block;
+      }
+
+
+      .story-card.featured
+      .story-image img {
+
+        min-height: 0;
+
+        height: 310px;
+      }
+
+
+      .story-image img {
+
+        height: 285px;
+      }
+
+
+      .media-shot
+      .story-image img {
+
+        height: 380px;
+      }
+
+
+      .overview-facts {
+
+        grid-template-columns:
+          1fr;
+      }
+
+
+      .takeaway-grid {
+
+        grid-template-columns:
+          1fr;
+      }
+
+
+      .research-bridge {
+
+        grid-template-columns:
+          1fr;
+      }
+
+
+      .final-reflection {
+
+        padding:
+          24px 20px;
+      }
+    }
+
+
+    @media (max-width: 480px) {
+
+      .container {
+
+        width:
+          min(
+            94%,
+            var(--max)
+          );
+      }
+
+
+      .hero h1 {
+
+        letter-spacing:
+          -.4px;
+      }
+
+
+      .hero-tags span {
+
+        font-size: 12px;
+      }
+
+
+      .story-body {
+
+        padding: 18px;
+      }
+
+
+      .story-body p,
+      .section-intro {
+
+        font-size: 15px;
+      }
+
+
+      .media-shot
+      .story-image img {
+
+        height: 330px;
+      }
+
+
+      .lightbox-close {
+
+        top: -12px;
+
+        right: -4px;
+      }
+    }
+
+
+    @media (
+      prefers-reduced-motion: reduce
+    ) {
+
+      html {
+
+        scroll-behavior:
+          auto;
+      }
+
+
+      *,
+      *::before,
+      *::after {
+
+        animation-duration:
+          .01ms !important;
+
+        transition-duration:
+          .01ms !important;
+      }
+
+
+      .reveal {
+
+        opacity: 1;
+
+        transform: none;
+      }
+    }
+
+  </style>
+
+</head>
+
+
+<body>
+
+
+  <div
+    class="progress-bar"
+    id="progressBar"
+  ></div>
+
+
+  <!-- ===========================
+       TOP BAR
+       =========================== -->
+
+  <header class="topbar">
+
+    <div
+      class="container topbar-row"
+    >
+
+      <a
+        class="brand"
+        href="index.html"
+      >
+        Manob's Portfolio
+      </a>
+
+
+      <a
+        class="back-link magnetic"
+        href="index.html"
+      >
+
+        <i
+          class="fa-solid fa-arrow-left"
+        ></i>
+
+        Back to Portfolio
+
+      </a>
+
+    </div>
+
+  </header>
+
+
+  <!-- ===========================
+       HERO
+       =========================== -->
+
+  <section
+    class="hero"
+    id="top"
+  >
+
+    <div class="container">
+
+      <div
+        class="hero-inner reveal"
+      >
+
+        <div class="eyebrow">
+
+          <i
+            class="fa-solid fa-seedling"
+          ></i>
+
+          International Academic Experience
+
+        </div>
+
+
+        <h1>
+          Sakura Science
+          Exchange Program
+        </h1>
+
+
+        <p class="hero-subtitle">
+
+          My seven-day journey at the
+          <strong>
+            University of Yamanashi,
+            Japan
+          </strong>
+          — connecting artificial
+          intelligence, smart agriculture,
+          research laboratories,
+          idea generation,
+          technical presentation,
+          and Japanese culture.
+
+        </p>
+
+
+        <div class="hero-tags">
+
+          <span>
+            University of Yamanashi
+          </span>
+
+          <span>
+            AI & Smart Agriculture
+          </span>
+
+          <span>
+            Research Culture
+          </span>
+
+          <span>
+            Japan
+          </span>
+
+        </div>
+
+
+        <div class="hero-actions">
+
+          <a
+            class="btn btn-primary magnetic"
+            href="#overview"
+          >
+
+            Explore the Journey
+
+            <i
+              class="fa-solid fa-arrow-down"
+            ></i>
+
+          </a>
+
+
+          <a
+            class="btn btn-secondary"
+            href="#reflection"
+          >
+
+            What I Took Home
+
+          </a>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- ===========================
+       JOURNEY DAY NAV
+       =========================== -->
+
+  <nav
+    class="journey-nav-wrap"
+    aria-label="Sakura journey navigation"
+  >
+
+    <div
+      class="container journey-nav"
+    >
+
+      <a
+        href="#overview"
+        class="active"
+      >
+        Overview
+      </a>
+
+      <a href="#selection">
+        Selection
+      </a>
+
+      <a href="#day1">
+        Day 1
+      </a>
+
+      <a href="#day2">
+        Day 2
+      </a>
+
+      <a href="#day3">
+        Day 3
+      </a>
+
+      <a href="#day4">
+        Day 4
+      </a>
+
+      <a href="#day5">
+        Day 5
+      </a>
+
+      <a href="#day6">
+        Day 6
+      </a>
+
+      <a href="#day7">
+        Day 7
+      </a>
+
+      <a href="#reflection">
+        Reflection
+      </a>
+
+    </div>
+
+  </nav>
+
+
+  <main>
+
+
+    <!-- ===========================
+         OVERVIEW
+         =========================== -->
+
+    <section
+      class="section"
+      id="overview"
+    >
+
+      <div class="container">
+
+
+        <div
+          class="section-head reveal"
+        >
+
+          <div class="section-kicker">
+
+            <i
+              class="fa-solid fa-compass"
+            ></i>
+
+            Program at a Glance
+
+          </div>
+
+
+          <h2>
+            More Than a Visit —
+            A Research-Oriented Exchange
+          </h2>
+
+
+          <p class="section-intro">
+
+            The Sakura Science Exchange
+            Program became one of the most
+            meaningful international academic
+            experiences of my undergraduate
+            journey.
+
+            It gave me direct exposure to a
+            different research culture while
+            connecting my interests in AI,
+            communication engineering, and
+            agriculture with laboratories,
+            researchers, and real technical
+            systems.
+
+          </p>
+
+        </div>
+
+
+        <div
+          class="overview-card tilt-card reveal"
+        >
+
+
+          <div
+            class="overview-image story-image"
+          >
+
+            <img
+              class="zoomable"
+              src="assets/images/sakura_official_group.jpg"
+              alt="Official Sakura Science Exchange Program group at the University of Yamanashi"
+            />
+
+          </div>
+
+
+          <div class="overview-content">
+
+
+            <h3>
+              Japan–Bangladesh Friendship
+              through Science
+            </h3>
+
+
+            <p>
+
+              Across seven days,
+              the experience progressed from
+              foundational AI learning to
+              laboratory exploration,
+              research idea generation,
+              presentation,
+              and cultural immersion.
+
+            </p>
+
+
+            <p>
+
+              The most important outcome for me
+              was a broader view of research:
+              not just building a model,
+              but understanding the real
+              problem, the surrounding system,
+              experimental constraints,
+              communication,
+              and collaboration.
+
+            </p>
+
+
+            <div class="overview-facts">
+
+
+              <div class="fact">
+
+                <strong>
+                  Host
+                </strong>
+
+                <span>
+                  University of Yamanashi,
+                  Japan
+                </span>
+
+              </div>
+
+
+              <div class="fact">
+
+                <strong>
+                  Academic Focus
+                </strong>
+
+                <span>
+                  AI, machine learning
+                  & smart agriculture
+                </span>
+
+              </div>
+
+
+              <div class="fact">
+
+                <strong>
+                  Core Exposure
+                </strong>
+
+                <span>
+                  Labs, robotics,
+                  communication systems
+                  & Ideathon
+                </span>
+
+              </div>
+
+
+              <div class="fact">
+
+                <strong>
+                  Personal Impact
+                </strong>
+
+                <span>
+                  Stronger research direction
+                  and global perspective
+                </span>
+
+              </div>
+
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- ===========================
+         SELECTION
+         =========================== -->
+
+    <section
+      class="section"
+      id="selection"
+    >
+
+      <div class="container">
+
+
+        <div
+          class="section-head reveal"
+        >
+
+          <div class="section-kicker">
+
+            <i
+              class="fa-solid fa-newspaper"
+            ></i>
+
+            Before Departure
+
+          </div>
+
+
+          <h2>
+            Selection and
+            National Media Coverage
+          </h2>
+
+
+          <p class="section-intro">
+
+            My selection for the exchange
+            received coverage in well-known
+            Bangladeshi media.
+
+            That recognition made the beginning
+            of the journey especially meaningful
+            and strengthened my sense of
+            responsibility as I prepared to
+            represent Pabna University of
+            Science and Technology
+            internationally.
+
+          </p>
+
+        </div>
+
+
+        <div
+          class="story-grid three"
+        >
+
+
+          <!-- Daily Campus -->
+
+          <article
+            class="story-card media-shot tilt-card reveal"
+          >
+
+            <div class="story-image">
+
+              <img
+                class="zoomable"
+                src="assets/images/The%20daily%20campus.jpg"
+                alt="The Daily Campus coverage of the Sakura Science selection"
+              />
+
+            </div>
+
+
+            <div class="story-body">
+
+              <h3>
+                The Daily Campus
+              </h3>
+
+
+              <p>
+
+                The Daily Campus highlighted
+                the selection of PUST students
+                for the Sakura Science Exchange
+                Program in Japan.
+
+              </p>
+
+            </div>
+
+          </article>
+
+
+          <!-- Kaler Kantha -->
+
+          <article
+            class="story-card media-shot tilt-card reveal"
+          >
+
+            <div class="story-image">
+
+              <img
+                class="zoomable"
+                src="assets/images/kaler%20kantha.jpg"
+                alt="Kaler Kantha coverage of the Sakura Science selection"
+              />
+
+            </div>
+
+
+            <div class="story-body">
+
+              <h3>
+                Kaler Kantha
+              </h3>
+
+
+              <p>
+
+                The opportunity was also reported
+                by one of Bangladesh's major
+                national newspapers,
+                giving the academic exchange
+                wider visibility.
+
+              </p>
+
+            </div>
+
+          </article>
+
+
+          <!-- Amar Desh -->
+
+          <article
+            class="story-card media-shot tilt-card reveal"
+          >
+
+            <div class="story-image">
+
+              <img
+                class="zoomable"
+                src="assets/images/amar%20desh.jpg"
+                alt="Amar Desh coverage of the Sakura Science selection"
+              />
+
+            </div>
+
+
+            <div class="story-body">
+
+              <h3>
+                Amar Desh
+              </h3>
+
+
+              <p>
+
+                Additional national coverage
+                reinforced the importance of
+                the exchange and the value
+                placed on international
+                scientific learning.
+
+              </p>
+
+            </div>
+
+          </article>
+
+
+        </div>
+
+
+        <div
+          class="learning reveal"
+        >
+
+          <div class="learning-title">
+
+            <i
+              class="fa-solid fa-lightbulb"
+            ></i>
+
+            What I Learned
+
+          </div>
+
+
+          <p>
+
+            Selection was not only an
+            achievement;
+            it also came with responsibility —
+            to represent my university well
+            and make the opportunity meaningful
+            through serious learning.
+
+          </p>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- ===========================
+         DAY 1
+         =========================== -->
+
+    <section
+      class="section"
+      id="day1"
+    >
+
+      <div class="container">
+
+
+        <div
+          class="section-head reveal"
+        >
+
+          <div class="section-kicker">
+
+            <i
+              class="fa-solid fa-plane"
+            ></i>
+
+            Day 1
+
+          </div>
+
+
+          <h2>
+            Journey to Japan and
+            a Warm Academic Welcome
+          </h2>
+
+
+          <p class="section-intro">
+
+            My Sakura journey began with the
+            flight to Japan.
+
+            The first day was about arrival,
+            orientation,
+            and meeting the professors and
+            organizers who would guide the
+            academic experience ahead.
+
+          </p>
+
+        </div>
+
+
+        <div class="story-grid">
+
+
+          <article
+            class="story-card tilt-card reveal"
+          >
+
+            <div class="story-image">
+
+              <img
+                class="zoomable"
+                src="assets/images/day_1_plane.jpg"
+                alt="Inside the aircraft during the journey to Japan"
+              />
+
+            </div>
+
+
+            <div class="story-body">
+
+              <h3>
+                Beginning the Journey
+              </h3>
+
+
+              <p>
+
+                Traveling to Japan for an
+                international science exchange
+                combined excitement with
+                curiosity about a new research
+                environment and academic culture.
+
+              </p>
+
+            </div>
+
+          </article>
+
+
+          <article
+            class="story-card tilt-card reveal"
+          >
+
+            <div class="story-image">
+
+              <img
+                class="zoomable"
+                src="assets/images/day_1_recieved_by_professors.jpg"
+                alt="Sakura Science participants welcomed by professors after arrival in Japan"
+              />
+
+            </div>
+
+
+            <div class="story-body">
+
+              <h3>
+                Received by the Professors
+              </h3>
+
+
+              <p>
+
+                After arrival,
+                I was welcomed by the
+                University of Yamanashi
+                professors and program hosts.
+
+                The warm reception immediately
+                made the exchange feel
+                collaborative and supportive.
+
+              </p>
+
+            </div>
+
+          </article>
+
+
+        </div>
+
+
+        <div
+          class="learning reveal"
+        >
+
+          <div class="learning-title">
+
+            <i
+              class="fa-solid fa-lightbulb"
+            ></i>
+
+            What I Learned
+
+          </div>
+
+
+          <p>
+
+            Academic collaboration begins
+            before the lecture starts.
+
+            A thoughtful and welcoming
+            environment helps create trust,
+            openness,
+            and confidence for meaningful
+            exchange.
+
+          </p>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- ===========================
+         DAY 2
+         =========================== -->
+
+    <section
+      class="section"
+      id="day2"
+    >
+
+      <div class="container">
+
+
+        <div
+          class="section-head reveal"
+        >
+
+          <div class="section-kicker">
+
+            <i
+              class="fa-solid fa-brain"
+            ></i>
+
+            Day 2
+
+          </div>
+
+
+          <h2>
+            Building the Foundations
+            of Agricultural AI
+          </h2>
+
+
+          <p class="section-intro">
+
+            Day 2 focused on foundational
+            learning through sessions on
+            agricultural AI,
+            Python programming,
+            machine learning,
+            deep learning,
+            and data analysis.
+
+          </p>
+
+        </div>
+
+
+        <div class="story-grid">
+
+
+          <article
+            class="story-card tilt-card reveal"
+          >
+
+            <div class="story-image">
+
+              <img
+                class="zoomable"
+                src="assets/images/day2_ai_session.jpg"
+                alt="Agricultural AI and data analysis learning session"
+              />
+
+            </div>
+
+
+            <div class="story-body">
+
+              <h3>
+                AI, Python and
+                Agricultural Data
+              </h3>
+
+
+              <p>
+
+                The session connected AI
+                concepts with agricultural data
+                and demonstrated how programming
+                and analysis can support smarter,
+                more data-driven farming
+                decisions.
+
+              </p>
+
+            </div>
+
+          </article>
+
+
+          <article
+            class="story-card tilt-card reveal"
+          >
+
+            <div class="story-image">
+
+              <img
+                class="zoomable"
+                src="assets/images/day2_deep_learning.jpg"
+                alt="Deep learning lecture at the University of Yamanashi"
+              />
+
+            </div>
+
+
+            <div class="story-body">
+
+              <h3>
+                Machine Learning and
+                Deep Learning
+              </h3>
+
+
+              <p>
+
+                The lecture strengthened my
+                understanding of how machine
+                learning and deep neural
+                networks can be connected to
+                real agricultural challenges
+                rather than treated only as
+                abstract methods.
+
+              </p>
+
+            </div>
+
+          </article>
+
+
+        </div>
+
+
+        <div
+          class="learning reveal"
+        >
+
+          <div class="learning-title">
+
+            <i
+              class="fa-solid fa-lightbulb"
+            ></i>
+
+            What I Learned
+
+          </div>
+
+
+          <p>
+
+            AI becomes meaningful when it is
+            connected to a real problem.
+
+            The value of an algorithm depends
+            on the problem it helps understand
+            or solve.
+
+          </p>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- ===========================
+         DAY 3
+         =========================== -->
+
+    <section
+      class="section"
+      id="day3"
+    >
+
+      <div class="container">
+
+
+        <div
+          class="section-head reveal"
+        >
+
+          <div class="section-kicker">
+
+            <i
+              class="fa-solid fa-flask"
+            ></i>
+
+            Day 3
+
+          </div>
+
+
+          <h2>
+            Inside the Research Culture
+            of the University of Yamanashi
+          </h2>
+
+
+          <p class="section-intro">
+
+            Day 3 was one of the most important
+            academic parts of the exchange.
+
+            I moved beyond classroom learning
+            and entered multiple laboratories,
+            where I could see how researchers
+            develop,
+            test,
+            explain,
+            and refine technical systems.
+
+          </p>
+
+        </div>
+
+
+        <div class="story-grid">
+
+
+          <!-- AI Agriculture -->
+
+          <article
+            class="story-card tilt-card reveal"
+          >
+
+            <div class="story-image">
+
+              <img
+                class="zoomable"
+                src="assets/images/day3_ai_agriculture.jpg"
+                alt="AI for agriculture research discussion"
+              />
+
+            </div>
+
+
+            <div class="story-body">
+
+              <h3>
+                AI for Agriculture Research
+              </h3>
+
+
+              <p>
+
+                I explored how artificial
+                intelligence is being applied
+                to agricultural problems and
+                how data-driven approaches can
+                contribute to smarter farming.
+
+              </p>
+
+
+              <div class="learning">
+
+                <div class="learning-title">
+                  What I Learned
+                </div>
+
+
+                <p>
+
+                  Research starts with
+                  understanding the real
+                  problem clearly,
+                  not simply choosing
+                  an algorithm.
+
+                </p>
+
+              </div>
+
+            </div>
+
+          </article>
+
+
+          <!-- Underwater Lab -->
+
+          <article
+            class="story-card tilt-card reveal"
+          >
+
+            <div class="story-image">
+
+              <img
+                class="zoomable"
+                src="assets/images/day3_underwater_lab.jpg"
+                alt="Underwater Communication Laboratory visit"
+              />
+
+            </div>
+
+
+            <div class="story-body">
+
+              <h3>
+                Underwater Communication
+                Laboratory
+              </h3>
+
+
+              <p>
+
+                This lab introduced me to a
+                communications problem where
+                the physical environment itself
+                changes what is technically
+                possible.
+
+                The experience connected
+                strongly with my Information
+                and Communication Engineering
+                background.
+
+              </p>
+
+
+              <div class="learning">
+
+                <div class="learning-title">
+                  What I Learned
+                </div>
+
+
+                <p>
+
+                  Engineering solutions must
+                  adapt to the physical
+                  environment in which
+                  they operate.
+
+                </p>
+
+              </div>
+
+            </div>
+
+          </article>
+
+
+          <!-- Agricultural Robotics featured -->
+
+          <article
+            class="story-card featured tilt-card reveal"
+          >
+
+            <div class="story-image">
+
+              <img
+                class="zoomable"
+                src="assets/images/day3_agri_robotics.jpg"
+                alt="Agricultural robotics and automated grape cultivation laboratory"
+              />
+
+            </div>
+
+
+            <div class="story-body">
+
+              <h3>
+
+                Agricultural Robotics
+                & Automated Grape Cultivation
+
+              </h3>
+
+
+              <p>
+
+                This visit was especially
+                meaningful because it connected
+                directly with my interest in
+                AI for agriculture.
+
+                I could see how robotics,
+                sensing,
+                automation,
+                and intelligent analysis can
+                work together inside a physical
+                farming system.
+
+              </p>
+
+
+              <div class="learning">
+
+                <div class="learning-title">
+                  What I Learned
+                </div>
+
+
+                <p>
+
+                  Agricultural AI can extend
+                  far beyond image
+                  classification.
+
+                  Real smart farming emerges
+                  when perception,
+                  sensing,
+                  robotics,
+                  and automation operate as one
+                  integrated system.
+
+                </p>
+
+              </div>
+
+            </div>
+
+          </article>
+
+
+          <!-- Communication -->
+
+          <article
+            class="story-card tilt-card reveal"
+          >
+
+            <div class="story-image">
+
+              <img
+                class="zoomable"
+                src="assets/images/day3_communication_lab.jpg"
+                alt="Technical presentation inside a communication laboratory"
+              />
+
+            </div>
+
+
+            <div class="story-body">
+
+              <h3>
+                Communication Lab Presentation
+              </h3>
+
+
+              <p>
+
+                Listening to researchers
+                explain projects beside the
+                actual experimental systems
+                helped me understand how
+                objectives,
+                design choices,
+                and limitations are
+                communicated in a real
+                laboratory setting.
+
+              </p>
+
+
+              <div class="learning">
+
+                <div class="learning-title">
+                  What I Learned
+                </div>
+
+
+                <p>
+
+                  Good research is not only
+                  about building a system;
+                  it is also about explaining
+                  why it exists,
+                  how it works,
+                  and where its limitations lie.
+
+                </p>
+
+              </div>
+
+            </div>
+
+          </article>
+
+
+          <!-- 3D -->
+
+          <article
+            class="story-card tilt-card reveal"
+          >
+
+            <div class="story-image">
+
+              <img
+                class="zoomable"
+                src="assets/images/day3_3d_animation.jpg"
+                alt="3D animation project session"
+              />
+
+            </div>
+
+
+            <div class="story-body">
+
+              <h3>
+                3D Animation Project Session
+              </h3>
+
+
+              <p>
+
+                The 3D animation session
+                introduced me to a different
+                way of constructing and
+                communicating digital
+                environments beyond the
+                research tools I normally use.
+
+              </p>
+
+
+              <div class="learning">
+
+                <div class="learning-title">
+                  What I Learned
+                </div>
+
+
+                <p>
+
+                  Technical ideas can be
+                  explored and communicated
+                  through many forms of
+                  digital representation.
+
+                </p>
+
+              </div>
+
+            </div>
+
+          </article>
+
+
+        </div>
+
+
+        <div
+          class="day-quote reveal"
+        >
+
+          Day 3 changed the way I looked at
+          a research laboratory —
+          from a room containing equipment
+          into an environment where ideas,
+          experiments,
+          people,
+          and communication continuously
+          interact.
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- ===========================
+         DAY 4
+         =========================== -->
+
+    <section
+      class="section"
+      id="day4"
+    >
+
+      <div class="container">
+
+
+        <div
+          class="section-head reveal"
+        >
+
+          <div class="section-kicker">
+
+            <i
+              class="fa-solid fa-lightbulb"
+            ></i>
+
+            Day 4
+
+          </div>
+
+
+          <h2>
+            From Learning to Creating:
+            The Ideathon
+          </h2>
+
+
+          <p class="section-intro">
+
+            Day 4 challenged me to transform
+            the knowledge from the previous
+            sessions into a research idea
+            of my own.
+
+            I moved from learning existing
+            technologies to identifying a
+            practical agricultural problem
+            and proposing an AI-driven
+            solution.
+
+          </p>
+
+        </div>
+
+
+        <div class="story-grid">
+
+
+          <article
+            class="story-card tilt-card reveal"
+          >
+
+            <div class="story-image">
+
+              <img
+                class="zoomable"
+                src="assets/images/day4_ideathon.jpg"
+                alt="Idea generation and discussion during the Sakura Science Ideathon"
+              />
+
+            </div>
+
+
+            <div class="story-body">
+
+              <h3>
+                Developing the Research Idea
+              </h3>
+
+
+              <p>
+
+                During the Ideathon,
+                I explored how AI could
+                address a practical agricultural
+                challenge in Bangladesh and
+                worked through the process of
+                shaping the problem into a
+                structured research concept.
+
+              </p>
+
+
+              <div class="learning">
+
+                <div class="learning-title">
+                  What I Learned
+                </div>
+
+
+                <p>
+
+                  Research begins when learning
+                  turns into questioning,
+                  problem identification,
+                  and solution design.
+
+                </p>
+
+              </div>
+
+            </div>
+
+          </article>
+
+
+          <article
+            class="story-card tilt-card reveal"
+          >
+
+            <div class="story-image">
+
+              <img
+                class="zoomable"
+                src="assets/images/day4_presentation.jpg"
+                alt="Presentation of the AI-powered rice nutrient deficiency detection idea"
+              />
+
+            </div>
+
+
+            <div class="story-body">
+
+              <h3>
+                Presenting My
+                AI-for-Agriculture Concept
+              </h3>
+
+
+              <p>
+
+                I presented
+
+                <strong>
+                  “AI-Powered Rice Nutrient
+                  Deficiency Detection and
+                  Fertilizer-Pesticide
+                  Recommendation System”
+                </strong>,
+
+                focusing on using AI to
+                identify rice nutrient
+                deficiencies and support
+                smarter agricultural
+                decisions.
+
+              </p>
+
+
+              <div class="learning">
+
+                <div class="learning-title">
+                  What I Learned
+                </div>
+
+
+                <p>
+
+                  The most valuable ideas are
+                  the ones that continue
+                  growing after the
+                  presentation ends.
+
+                </p>
+
+              </div>
+
+            </div>
+
+          </article>
+
+
+        </div>
+
+
+        <div
+          class="research-bridge reveal"
+        >
+
+
+          <div
+            class="research-bridge-icon"
+          >
+
+            <i
+              class="fa-solid fa-arrow-trend-up"
+            ></i>
+
+          </div>
+
+
+          <div>
+
+            <h3>
+              From Exchange Idea
+              to Continuing Research
+            </h3>
+
+
+            <p>
+
+              The concept did not remain only
+              an Ideathon presentation.
+
+              I later developed its
+              nutrient-detection component
+              further through
+              Vision Transformer-based work
+              on identifying healthy rice
+              leaves and nitrogen,
+              phosphorus,
+              and potassium deficiencies.
+
+            </p>
+
+          </div>
+
+        </div>
+
+
+        <div
+          class="day-quote reveal"
+        >
+
+          For me,
+          Day 4 marked a transition from
+          learning existing technologies
+          to thinking more like a researcher —
+          identifying a problem,
+          proposing a solution,
+          and communicating the idea in an
+          international academic environment.
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- ===========================
+         DAY 5
+         =========================== -->
+
+    <section
+      class="section"
+      id="day5"
+    >
+
+      <div class="container">
+
+
+        <div
+          class="section-head reveal"
+        >
+
+          <div class="section-kicker">
+
+            <i
+              class="fa-solid fa-mountain-sun"
+            ></i>
+
+            Day 5
+
+          </div>
+
+
+          <h2>
+            Experiencing Japan
+            Beyond the Laboratory
+          </h2>
+
+
+          <p class="section-intro">
+
+            After several academically
+            intensive days,
+            Day 5 brought a cultural
+            dimension to the exchange
+            through a visit to Mount Fuji —
+            one of the most memorable
+            personal experiences of
+            the journey.
+
+          </p>
+
+        </div>
+
+
+        <div class="story-grid">
+
+
+          <article
+            class="story-card tilt-card reveal"
+          >
+
+            <div class="story-image">
+
+              <img
+                class="zoomable"
+                src="assets/images/day5_fuji_group.jpg"
+                alt="Sakura Science group with Mount Fuji in the background"
+              />
+
+            </div>
+
+
+            <div class="story-body">
+
+              <h3>
+                Sakura Science Group
+                at Mount Fuji
+              </h3>
+
+
+              <p>
+
+                The group photograph captured
+                a memorable cultural moment
+                in the exchange,
+                with Mount Fuji creating a
+                remarkable backdrop to the
+                experience.
+
+              </p>
+
+            </div>
+
+          </article>
+
+
+          <article
+            class="story-card tilt-card reveal"
+          >
+
+            <div class="story-image">
+
+              <img
+                class="zoomable"
+                src="assets/images/day5_fuji_personal.jpg"
+                alt="Manob Chandra Chanda at Mount Fuji"
+              />
+
+            </div>
+
+
+            <div class="story-body">
+
+              <h3>
+                A Personal Moment
+                at Mount Fuji
+              </h3>
+
+
+              <p>
+
+                Standing in front of
+                Mount Fuji gave me a moment
+                to step outside the academic
+                schedule and connect more
+                personally with Japan's
+                landscape and cultural
+                identity.
+
+              </p>
+
+            </div>
+
+          </article>
+
+
+        </div>
+
+
+        <div
+          class="learning reveal"
+        >
+
+          <div class="learning-title">
+
+            <i
+              class="fa-solid fa-lightbulb"
+            ></i>
+
+            What I Learned
+
+          </div>
+
+
+          <p>
+
+            International education is also
+            cultural education.
+
+            Understanding the place and culture
+            around an academic exchange adds
+            depth to the relationships and
+            memories built there.
+
+          </p>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- ===========================
+         DAY 6
+         =========================== -->
+
+    <section
+      class="section"
+      id="day6"
+    >
+
+      <div class="container">
+
+
+        <div
+          class="section-head reveal"
+        >
+
+          <div class="section-kicker">
+
+            <i
+              class="fa-solid fa-torii-gate"
+            ></i>
+
+            Day 6
+
+          </div>
+
+
+          <h2>
+            Tokyo Through Science,
+            History and Culture
+          </h2>
+
+
+          <p class="section-intro">
+
+            Day 6 brought together science
+            and cultural exploration through
+            visits to the Science Museum,
+            the Sensō-ji Temple area
+            in Asakusa,
+            and the Tokyo National Museum.
+
+          </p>
+
+        </div>
+
+
+        <div class="story-grid">
+
+
+          <!-- Science Museum -->
+
+          <article
+            class="story-card tilt-card reveal"
+          >
+
+            <div class="story-image">
+
+              <img
+                class="zoomable"
+                src="assets/images/day6_science_museum.jpg"
+                alt="Sakura Science group at the Science Museum"
+              />
+
+            </div>
+
+
+            <div class="story-body">
+
+              <h3>
+                Science Museum
+              </h3>
+
+
+              <p>
+
+                I explored science and
+                technology outside the formal
+                university setting,
+                seeing how scientific ideas
+                can be presented through
+                direct and accessible
+                experiences.
+
+              </p>
+
+
+              <div class="learning">
+
+                <div class="learning-title">
+                  What I Learned
+                </div>
+
+
+                <p>
+
+                  Complex scientific ideas
+                  become more accessible when
+                  they are communicated through
+                  experience and interaction.
+
+                </p>
+
+              </div>
+
+            </div>
+
+          </article>
+
+
+          <!-- Kaminarimon -->
+
+          <article
+            class="story-card tilt-card reveal"
+          >
+
+            <div class="story-image">
+
+              <img
+                class="zoomable"
+                src="assets/images/day6_kaminarimon.jpg"
+                alt="Sakura Science group at Kaminarimon Gate, Senso-ji Temple, Asakusa"
+              />
+
+            </div>
+
+
+            <div class="story-body">
+
+              <h3>
+                Kaminarimon Gate —
+                Sensō-ji, Asakusa
+              </h3>
+
+
+              <p>
+
+                Visiting the iconic
+                Kaminarimon Gate introduced
+                me to one of Tokyo's most
+                recognizable historical and
+                cultural settings.
+
+              </p>
+
+
+              <div class="learning">
+
+                <div class="learning-title">
+                  What I Learned
+                </div>
+
+
+                <p>
+
+                  Technological progress and
+                  cultural preservation can
+                  exist side by side within
+                  the same society.
+
+                </p>
+
+              </div>
+
+            </div>
+
+          </article>
+
+
+          <!-- Sensoji -->
+
+          <article
+            class="story-card tilt-card reveal"
+          >
+
+            <div class="story-image">
+
+              <img
+                class="zoomable"
+                src="assets/images/day6_sensoji.jpg"
+                alt="Historic Senso-ji Temple area in Asakusa, Tokyo"
+              />
+
+            </div>
+
+
+            <div class="story-body">
+
+              <h3>
+                Sensō-ji Temple Area
+              </h3>
+
+
+              <p>
+
+                Walking through the temple
+                area helped me experience
+                a historical side of Tokyo
+                and see how cultural heritage
+                remains integrated into
+                modern urban life.
+
+              </p>
+
+            </div>
+
+          </article>
+
+
+          <!-- Tokyo Museum -->
+
+          <article
+            class="story-card tilt-card reveal"
+          >
+
+            <div class="story-image">
+
+              <img
+                class="zoomable"
+                src="assets/images/day6_tokyo_museum.jpg"
+                alt="Visit to the Tokyo National Museum"
+              />
+
+            </div>
+
+
+            <div class="story-body">
+
+              <h3>
+                Tokyo National Museum
+              </h3>
+
+
+              <p>
+
+                The museum offered another
+                perspective on Japan through
+                its art,
+                history,
+                and preserved cultural
+                heritage beyond the country's
+                technological achievements.
+
+              </p>
+
+
+              <div class="learning">
+
+                <div class="learning-title">
+                  What I Learned
+                </div>
+
+
+                <p>
+
+                  Understanding innovation
+                  becomes richer when I also
+                  understand the history and
+                  culture from which it
+                  emerges.
+
+                </p>
+
+              </div>
+
+            </div>
+
+          </article>
+
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- ===========================
+         DAY 7
+         =========================== -->
+
+    <section
+      class="section"
+      id="day7"
+    >
+
+      <div class="container">
+
+
+        <div
+          class="section-head reveal"
+        >
+
+          <div class="section-kicker">
+
+            <i
+              class="fa-solid fa-route"
+            ></i>
+
+            Day 7
+
+          </div>
+
+
+          <h2>
+            Farewell to Japan
+            and Return Home
+          </h2>
+
+
+          <p class="section-intro">
+
+            Day 7 marked the end of the
+            physical journey,
+            but not the end of its
+            academic impact.
+
+            I left Japan after a week of
+            learning,
+            laboratory exposure,
+            research idea development,
+            presentation,
+            and cultural exploration.
+
+          </p>
+
+        </div>
+
+
+        <article
+          class="story-card featured tilt-card reveal"
+        >
+
+          <div class="story-image">
+
+            <img
+              class="zoomable"
+              src="assets/images/day7_airport.jpg"
+              alt="Final Sakura Science group photograph at the airport before departure"
+            />
+
+          </div>
+
+
+          <div class="story-body">
+
+            <h3>
+              A Final Group Moment
+              at the Airport
+            </h3>
+
+
+            <p>
+
+              Before departure,
+              I joined the final group
+              photograph with the
+              Sakura Science team.
+
+              It captured the closing moment
+              of an intensive seven-day
+              journey and the beginning of
+              a new phase —
+              applying the lessons and
+              motivation from Japan to my
+              own research path.
+
+            </p>
+
+
+            <div class="learning">
+
+              <div class="learning-title">
+                What I Took Home
+              </div>
+
+
+              <p>
+
+                I returned with a broader
+                research perspective,
+                stronger motivation,
+                and a clearer interest in
+                connecting artificial
+                intelligence with meaningful
+                real-world problems.
+
+              </p>
+
+            </div>
+
+          </div>
+
+        </article>
+
+      </div>
+
+    </section>
+
+
+    <!-- ===========================
+         FINAL REFLECTION
+         =========================== -->
+
+    <section
+      class="section"
+      id="reflection"
+    >
+
+      <div class="container">
+
+
+        <div
+          class="section-head reveal"
+        >
+
+          <div class="section-kicker">
+
+            <i
+              class="fa-solid fa-seedling"
+            ></i>
+
+            Final Reflection
+
+          </div>
+
+
+          <h2>
+            What Sakura Changed for Me
+          </h2>
+
+
+          <p class="section-intro">
+
+            The strongest value of the
+            exchange was not any single
+            lecture,
+            laboratory,
+            or photograph.
+
+            It was the way those experiences
+            collectively changed how I think
+            about research and the kinds of
+            problems I want to work on.
+
+          </p>
+
+        </div>
+
+
+        <div class="takeaway-grid">
+
+
+          <div
+            class="takeaway tilt-card reveal"
+          >
+
+            <i
+              class="fa-solid fa-microscope"
+            ></i>
+
+
+            <h3>
+              From Student to Researcher
+            </h3>
+
+
+            <p>
+
+              I became more conscious of the
+              difference between learning
+              existing knowledge and shaping
+              a research question of my own.
+
+            </p>
+
+          </div>
+
+
+          <div
+            class="takeaway tilt-card reveal"
+          >
+
+            <i
+              class="fa-solid fa-gears"
+            ></i>
+
+
+            <h3>
+              From AI Model to Real System
+            </h3>
+
+
+            <p>
+
+              I learned to think beyond
+              isolated algorithms and
+              consider sensing,
+              communication,
+              robotics,
+              automation,
+              deployment,
+              and practical constraints.
+
+            </p>
+
+          </div>
+
+
+          <div
+            class="takeaway tilt-card reveal"
+          >
+
+            <i
+              class="fa-solid fa-people-group"
+            ></i>
+
+
+            <h3>
+              Academic Communication
+            </h3>
+
+
+            <p>
+
+              I gained a clearer view of how
+              researchers explain objectives,
+              methods,
+              limitations,
+              and ideas within an experimental
+              environment.
+
+            </p>
+
+          </div>
+
+
+          <div
+            class="takeaway tilt-card reveal"
+          >
+
+            <i
+              class="fa-solid fa-earth-asia"
+            ></i>
+
+
+            <h3>
+              Global Research Perspective
+            </h3>
+
+
+            <p>
+
+              The experience showed me how
+              international collaboration can
+              connect different academic
+              cultures around shared technical
+              problems.
+
+            </p>
+
+          </div>
+
+
+        </div>
+
+
+        <div
+          class="final-reflection reveal"
+        >
+
+          <h3>
+            A Lasting Academic Impact
+          </h3>
+
+
+          <p>
+
+            I returned from Japan with
+            stronger research motivation,
+            greater interdisciplinary
+            awareness,
+            and a clearer ambition to connect
+            artificial intelligence with
+            real-world challenges —
+            especially in agriculture and
+            applied innovation.
+
+          </p>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+  </main>
+
+
+  <!-- ===========================
+       FOOTER
+       =========================== -->
+
+  <footer class="footer">
+
+    <div
+      class="container footer-row"
+    >
+
+      <p>
+
+        © Manob Chandra Chanda •
+        Pabna University of Science
+        and Technology
+
+      </p>
+
+
+      <a
+        class="btn btn-secondary"
+        href="index.html"
+      >
+
+        Continue to My Portfolio
+
+        <i
+          class="fa-solid fa-arrow-right"
+        ></i>
+
+      </a>
+
+    </div>
+
+  </footer>
+
+
+  <!-- ===========================
+       BACK TO TOP
+       =========================== -->
+
+  <button
+    class="back-to-top"
+    id="backToTop"
+    type="button"
+    aria-label="Back to top"
+  >
+
+    <i
+      class="fa-solid fa-arrow-up"
+    ></i>
+
+  </button>
+
+
+  <!-- ===========================
+       IMAGE LIGHTBOX
+       =========================== -->
+
+  <div
+    class="lightbox"
+    id="lightbox"
+    role="dialog"
+    aria-modal="true"
+    aria-label="Image preview"
+  >
+
+    <div class="lightbox-inner">
+
+
+      <button
+        class="lightbox-close"
+        id="lightboxClose"
+        type="button"
+        aria-label="Close image preview"
+      >
+
+        <i
+          class="fa-solid fa-xmark"
+        ></i>
+
+      </button>
+
+
+      <img
+        id="lightboxImage"
+        src=""
+        alt=""
+      />
+
+
+      <div
+        class="lightbox-caption"
+        id="lightboxCaption"
+      ></div>
+
+
+    </div>
+
+  </div>
+
+
+  <!-- ===========================
+       JAVASCRIPT
+       =========================== -->
+
+  <script>
+
+    (() => {
+
+
+      const reduceMotion =
+        window.matchMedia(
+          "(prefers-reduced-motion: reduce)"
+        ).matches;
+
+
+      const finePointer =
+        window.matchMedia(
+          "(hover: hover) and (pointer: fine)"
+        ).matches;
+
+
+      const progressBar =
+        document.getElementById(
+          "progressBar"
+        );
+
+
+      const backToTop =
+        document.getElementById(
+          "backToTop"
+        );
+
+
+      const hero =
+        document.querySelector(
+          ".hero"
+        );
+
+
+      /* ===========================
+         Scroll progress
+         =========================== */
+
+      function updateScrollUI() {
+
+
+        const scrollTop =
+          window.scrollY ||
+          document.documentElement.scrollTop;
+
+
+        const scrollable =
+          document.documentElement.scrollHeight -
+          window.innerHeight;
+
+
+        const progress =
+          scrollable > 0
+            ?
+            (
+              scrollTop /
+              scrollable
+            ) * 100
+            :
+            0;
+
+
+        progressBar.style.width =
+          `${
+            Math.min(
+              progress,
+              100
+            )
+          }%`;
+
+
+        backToTop.classList.toggle(
+          "show",
+          scrollTop > 700
+        );
+
+      }
+
+
+      window.addEventListener(
+        "scroll",
+        updateScrollUI,
+        {
+          passive: true
+        }
+      );
+
+
+      updateScrollUI();
+
+
+      /* ===========================
+         Back to top
+         =========================== */
+
+      backToTop.addEventListener(
+        "click",
+        () => {
+
+          window.scrollTo({
+
+            top: 0,
+
+            behavior:
+              reduceMotion
+                ?
+                "auto"
+                :
+                "smooth"
+
+          });
+
+        }
+      );
+
+
+      /* ===========================
+         Smooth anchor scrolling
+         =========================== */
+
+      document
+        .querySelectorAll(
+          'a[href^="#"]'
+        )
+        .forEach(
+          (link) => {
+
+
+            link.addEventListener(
+              "click",
+              (event) => {
+
+
+                const selector =
+                  link.getAttribute(
+                    "href"
+                  );
+
+
+                const target =
+                  document.querySelector(
+                    selector
+                  );
+
+
+                if (!target) return;
+
+
+                event.preventDefault();
+
+
+                target.scrollIntoView({
+
+                  behavior:
+                    reduceMotion
+                      ?
+                      "auto"
+                      :
+                      "smooth",
+
+                  block:
+                    "start"
+
+                });
+
+
+              }
+            );
+
+
+          }
+        );
+
+
+      /* ===========================
+         Scroll reveal
+         =========================== */
+
+      const revealItems =
+        document.querySelectorAll(
+          ".reveal"
+        );
+
+
+      if (
+        !reduceMotion &&
+        "IntersectionObserver" in window
+      ) {
+
+
+        const revealObserver =
+          new IntersectionObserver(
+
+            (
+              entries,
+              observer
+            ) => {
+
+
+              entries.forEach(
+                (entry) => {
+
+
+                  if (
+                    entry.isIntersecting
+                  ) {
+
+
+                    entry.target.classList.add(
+                      "visible"
+                    );
+
+
+                    observer.unobserve(
+                      entry.target
+                    );
+
+
+                  }
+
+
+                }
+              );
+
+
+            },
+
+            {
+
+              threshold: 0.08,
+
+              rootMargin:
+                "0px 0px -40px 0px"
+
+            }
+
+          );
+
+
+        revealItems.forEach(
+          (item) =>
+            revealObserver.observe(
+              item
+            )
+        );
+
+
+      } else {
+
+
+        revealItems.forEach(
+          (item) =>
+            item.classList.add(
+              "visible"
+            )
+        );
+
+
+      }
+
+
+      /* ===========================
+         Active Day navigation
+         =========================== */
+
+      const navLinks =
+        [
+          ...document.querySelectorAll(
+            ".journey-nav a"
+          )
+        ];
+
+
+      const sections =
+        navLinks
+          .map(
+            (link) =>
+              document.querySelector(
+                link.getAttribute(
+                  "href"
+                )
+              )
+          )
+          .filter(Boolean);
+
+
+      if (
+        "IntersectionObserver" in window
+      ) {
+
+
+        const navObserver =
+          new IntersectionObserver(
+
+            (entries) => {
+
+
+              const visible =
+                entries
+                  .filter(
+                    (entry) =>
+                      entry.isIntersecting
+                  )
+                  .sort(
+                    (a, b) =>
+                      b.intersectionRatio -
+                      a.intersectionRatio
+                  )[0];
+
+
+              if (!visible) return;
+
+
+              navLinks.forEach(
+                (link) => {
+
+
+                  link.classList.toggle(
+
+                    "active",
+
+                    link.getAttribute(
+                      "href"
+                    ) ===
+                    `#${visible.target.id}`
+
+                  );
+
+
+                }
+              );
+
+
+              const active =
+                document.querySelector(
+                  ".journey-nav a.active"
+                );
+
+
+              if (active) {
+
+
+                active.scrollIntoView({
+
+                  inline:
+                    "center",
+
+                  block:
+                    "nearest",
+
+                  behavior:
+                    "auto"
+
+                });
+
+
+              }
+
+
+            },
+
+            {
+
+              threshold:
+                [
+                  0.18,
+                  0.3,
+                  0.5
+                ],
+
+              rootMargin:
+                "-130px 0px -52% 0px"
+
+            }
+
+          );
+
+
+        sections.forEach(
+          (section) =>
+            navObserver.observe(
+              section
+            )
+        );
+
+
+      }
+
+
+      /* ===========================
+         Mouse interaction
+         =========================== */
+
+      if (
+        finePointer &&
+        !reduceMotion
+      ) {
+
+
+        /* Hero mouse spotlight */
+
+        if (hero) {
+
+
+          hero.addEventListener(
+            "mousemove",
+            (event) => {
+
+
+              const rect =
+                hero.getBoundingClientRect();
+
+
+              hero.style.setProperty(
+
+                "--mx",
+
+                `${
+                  event.clientX -
+                  rect.left
+                }px`
+
+              );
+
+
+              hero.style.setProperty(
+
+                "--my",
+
+                `${
+                  event.clientY -
+                  rect.top
+                }px`
+
+              );
+
+
+            }
+          );
+
+
+        }
+
+
+        /* Card tilt */
+
+        document
+          .querySelectorAll(
+            ".tilt-card"
+          )
+          .forEach(
+            (card) => {
+
+
+              card.addEventListener(
+                "mousemove",
+                (event) => {
+
+
+                  const rect =
+                    card.getBoundingClientRect();
+
+
+                  const x =
+                    (
+                      event.clientX -
+                      rect.left
+                    ) /
+                    rect.width;
+
+
+                  const y =
+                    (
+                      event.clientY -
+                      rect.top
+                    ) /
+                    rect.height;
+
+
+                  const rotateY =
+                    (
+                      x - .5
+                    ) * 3.5;
+
+
+                  const rotateX =
+                    (
+                      .5 - y
+                    ) * 3.5;
+
+
+                  card.style.transform =
+
+                    `perspective(1000px) ` +
+
+                    `rotateX(${rotateX}deg) ` +
+
+                    `rotateY(${rotateY}deg) ` +
+
+                    `translateY(-2px)`;
+
+
+                }
+              );
+
+
+              card.addEventListener(
+                "mouseleave",
+                () => {
+
+                  card.style.transform =
+                    "";
+
+                }
+              );
+
+
+            }
+          );
+
+
+        /* Magnetic buttons */
+
+        document
+          .querySelectorAll(
+            ".magnetic"
+          )
+          .forEach(
+            (item) => {
+
+
+              item.addEventListener(
+                "mousemove",
+                (event) => {
+
+
+                  const rect =
+                    item.getBoundingClientRect();
+
+
+                  const x =
+                    event.clientX -
+                    rect.left -
+                    rect.width / 2;
+
+
+                  const y =
+                    event.clientY -
+                    rect.top -
+                    rect.height / 2;
+
+
+                  item.style.transform =
+
+                    `translate(` +
+
+                    `${x * .04}px, ` +
+
+                    `${y * .07}px` +
+
+                    `) translateY(-1px)`;
+
+
+                }
+              );
+
+
+              item.addEventListener(
+                "mouseleave",
+                () => {
+
+                  item.style.transform =
+                    "";
+
+                }
+              );
+
+
+            }
+          );
+
+
+      }
+
+
+      /* ===========================
+         Image Lightbox
+         =========================== */
+
+      const lightbox =
+        document.getElementById(
+          "lightbox"
+        );
+
+
+      const lightboxImage =
+        document.getElementById(
+          "lightboxImage"
+        );
+
+
+      const lightboxCaption =
+        document.getElementById(
+          "lightboxCaption"
+        );
+
+
+      const lightboxClose =
+        document.getElementById(
+          "lightboxClose"
+        );
+
+
+      function closeLightbox() {
+
+
+        lightbox.classList.remove(
+          "open"
+        );
+
+
+        document.body.style.overflow =
+          "";
+
+
+        lightboxImage.src =
+          "";
+
+
+      }
+
+
+      document
+        .querySelectorAll(
+          ".zoomable"
+        )
+        .forEach(
+          (image) => {
+
+
+            image.addEventListener(
+              "click",
+              () => {
+
+
+                lightboxImage.src =
+                  image.src;
+
+
+                lightboxImage.alt =
+                  image.alt;
+
+
+                lightboxCaption.textContent =
+                  image.alt;
+
+
+                lightbox.classList.add(
+                  "open"
+                );
+
+
+                document.body.style.overflow =
+                  "hidden";
+
+
+                lightboxClose.focus();
+
+
+              }
+            );
+
+
+          }
+        );
+
+
+      lightboxClose.addEventListener(
+        "click",
+        closeLightbox
+      );
+
+
+      lightbox.addEventListener(
+        "click",
+        (event) => {
+
+
+          if (
+            event.target ===
+            lightbox
+          ) {
+
+
+            closeLightbox();
+
+
+          }
+
+
+        }
+      );
+
+
+      document.addEventListener(
+        "keydown",
+        (event) => {
+
+
+          if (
+            event.key === "Escape" &&
+            lightbox.classList.contains(
+              "open"
+            )
+          ) {
+
+
+            closeLightbox();
+
+
+          }
+
+
+        }
+      );
+
+
+    })();
+
+  </script>
+
+
+</body>
+
+</html>
