@@ -1,11 +1,11 @@
 /* =========================================================
    HOME PAGE ENHANCEMENTS + SAKURA FEATURE
-   Updated to match requested green-accent design
+   Existing style.css-এর উপর কাজ করবে।
    ========================================================= */
 
 .nav-links a {
   position: relative;
-  transition: color 0.25s ease;
+  transition: color .25s ease;
 }
 
 .nav-links a::after {
@@ -15,10 +15,10 @@
   bottom: -6px;
   width: 100%;
   height: 2px;
-  background: #2e7d32;
+  background: #1e88e5;
   transform: scaleX(0);
   transform-origin: left;
-  transition: transform 0.25s ease;
+  transition: transform .25s ease;
 }
 
 .nav-links a:hover::after,
@@ -26,51 +26,65 @@
   transform: scaleX(1);
 }
 
-.nav-links a:hover,
-.nav-links a.active {
-  color: #2e7d32;
+.nav-links a:hover {
+  color: #1e88e5;
 }
+
 
 /* =========================
    Sakura homepage feature
    ========================= */
 
 .sakura-feature-section {
-  margin-top: 40px;
+  margin-top: 38px;
 }
 
 .sakura-feature-card {
-  --mx: 72%;
-  --my: 22%;
+  --mx: 70%;
+  --my: 18%;
 
   position: relative;
   overflow: hidden;
 
   display: grid;
-  grid-template-columns: minmax(0, 1.02fr) minmax(0, 0.98fr);
+  grid-template-columns:
+    minmax(0, 1.08fr)
+    minmax(0, .92fr);
 
   background: #ffffff;
-  border: 1px solid #dbe7dc;
-  border-radius: 20px;
 
-  box-shadow: 0 18px 38px rgba(42, 78, 58, 0.10);
-  transition: box-shadow 0.3s ease, border-color 0.3s ease;
+  border: 1px solid #dce4ee;
+  border-radius: 18px;
+
+  box-shadow:
+    0 12px 30px
+    rgba(31, 59, 91, .08);
+
+  transition:
+    box-shadow .3s ease,
+    border-color .3s ease;
 }
 
 .sakura-feature-card::after {
   content: "";
+
   position: absolute;
   inset: 0;
+
   pointer-events: none;
 
-  background: radial-gradient(
-    360px circle at var(--mx) var(--my),
-    rgba(46, 125, 50, 0.10),
-    transparent 64%
-  );
+  background:
+    radial-gradient(
+      360px circle
+      at var(--mx) var(--my),
+      rgba(216, 92, 139, .12),
+      transparent 62%
+    );
 
   opacity: 0;
-  transition: opacity 0.25s ease;
+
+  transition:
+    opacity .25s ease;
 }
 
 .sakura-feature-card:hover::after {
@@ -78,142 +92,237 @@
 }
 
 .sakura-feature-card:hover {
-  border-color: #c8d9cb;
-  box-shadow: 0 24px 52px rgba(42, 78, 58, 0.16);
+  border-color: #c9d8ea;
+
+  box-shadow:
+    0 20px 44px
+    rgba(31, 59, 91, .14);
 }
+
 
 /* Sakura image */
 
 .sakura-feature-image {
-  min-height: 390px;
-  background: #eef6f0;
+  min-height: 365px;
+
+  background: #eef4fb;
+
   overflow: hidden;
 }
 
 .sakura-feature-image img {
   width: 100%;
   height: 100%;
-  min-height: 390px;
+
+  min-height: 365px;
+
   object-fit: cover;
-  object-position: left center; /* user visible at left */
+
+  /*
+    তুমি ছবির একেবারে left side-এ।
+    তাই crop হলেও left side preserve হবে।
+  */
+  object-position: left center;
+
   display: block;
-  transition: transform 0.6s cubic-bezier(0.2, 0.7, 0.2, 1);
+
+  transition:
+    transform .6s
+    cubic-bezier(.2, .7, .2, 1);
 }
 
-.sakura-feature-card:hover .sakura-feature-image img {
-  transform: scale(1.03);
+.sakura-feature-card:hover
+.sakura-feature-image img {
+  transform: scale(1.035);
 }
+
 
 /* Sakura text */
 
 .sakura-feature-content {
   position: relative;
+
   z-index: 1;
 
-  padding: 40px 36px;
+  padding:
+    34px 32px;
 
   display: flex;
+
   flex-direction: column;
+
   justify-content: center;
 }
 
 .sakura-kicker {
   display: inline-flex;
+
   width: fit-content;
+
   align-items: center;
+
   gap: 8px;
 
-  padding: 8px 14px;
+  padding:
+    7px 12px;
+
   border-radius: 999px;
 
-  background: #eef8f0;
-  color: #2e7d32;
+  background: #fff0f6;
 
-  font-size: 13px;
+  color: #b63f6b;
+
+  font-size: 12px;
+
   font-weight: 800;
-  letter-spacing: 0.7px;
+
+  letter-spacing: .7px;
+
   text-transform: uppercase;
 
-  margin-bottom: 16px;
+  margin-bottom: 14px;
 }
 
 .sakura-feature-title {
-  margin: 0 0 14px;
-  color: #1f3b2f;
-  font-size: 31px;
+  margin:
+    0 0 12px;
+
+  color: #1f3b5b;
+
+  font-size: 26px;
+
   line-height: 1.3;
 }
 
 .sakura-feature-text {
-  margin: 0 0 18px;
-  color: #4c5f55;
-  font-size: 17px;
-  line-height: 1.9;
+  margin:
+    0 0 18px;
+
+  color: #596574;
+
+  font-size: 15px;
+
+  line-height: 1.85;
 }
+
+
+/* Tags */
 
 .sakura-feature-tags {
   display: flex;
+
   flex-wrap: wrap;
-  gap: 10px;
+
+  gap: 9px;
+
   margin-bottom: 22px;
 }
 
 .sakura-feature-tags span {
-  padding: 8px 12px;
+  padding:
+    7px 11px;
+
   border-radius: 999px;
-  background: #f4f8f4;
-  border: 1px solid #d9e6da;
-  color: #315944;
-  font-size: 13px;
+
+  background: #f4f8fc;
+
+  border:
+    1px solid #d9e4ef;
+
+  color: #34516e;
+
+  font-size: 12px;
+
   font-weight: 700;
 }
+
+
+/* Sakura button */
 
 .sakura-feature-action {
   display: inline-flex;
+
   width: fit-content;
+
   align-items: center;
+
   gap: 9px;
 
-  padding: 12px 18px;
-  border-radius: 10px;
+  padding:
+    11px 17px;
+
+  border-radius: 9px;
+
   text-decoration: none;
 
-  background: #25593b;
+  background: #1f3b5b;
+
   color: #ffffff;
 
   font-weight: 700;
-  font-size: 15px;
 
-  transition: transform 0.25s ease, background 0.25s ease, box-shadow 0.25s ease;
+  font-size: 14px;
+
+  transition:
+    transform .25s ease,
+    background .25s ease,
+    box-shadow .25s ease;
 }
 
 .sakura-feature-action:hover {
-  background: #2e7d32;
-  transform: translateY(-2px);
-  box-shadow: 0 10px 22px rgba(37, 89, 59, 0.22);
+  background: #294f78;
+
+  transform:
+    translateY(-2px);
+
+  box-shadow:
+    0 10px 20px
+    rgba(31, 59, 91, .18);
 }
 
+
+/* Short learning box */
+
 .sakura-mini-learning {
-  margin: 18px 0 0;
-  padding: 14px 16px;
-  border-left: 4px solid #2e7d32;
-  background: #eff8f1;
-  color: #4d6555;
-  font-size: 14px;
-  line-height: 1.75;
-  border-radius: 0 10px 10px 0;
+  margin:
+    17px 0 0;
+
+  padding:
+    12px 14px;
+
+  border-left:
+    3px solid #d85c8b;
+
+  background: #fff7fa;
+
+  color: #6d4a58;
+
+  font-size: 13px;
+
+  line-height: 1.65;
+
+  border-radius:
+    0 8px 8px 0;
 }
 
 .sakura-mini-learning strong {
-  color: #2e7d32;
+  color: #b63f6b;
 }
+
+
+/* Existing Sakura research card link */
 
 .sakura-research-link {
   display: inline-flex;
+
   margin-top: 14px;
+
   text-decoration: none;
+
   color: #2e7d32;
+
   font-weight: 700;
+
   font-size: 13px;
 }
 
@@ -221,111 +330,166 @@
   text-decoration: underline;
 }
 
-/* Scroll reveal */
+
+/* ========================
+   Scroll reveal
+   ======================== */
 
 .js-reveal {
   opacity: 0;
-  transform: translateY(18px);
-  transition: opacity 0.7s ease, transform 0.7s ease;
+
+  transform:
+    translateY(18px);
+
+  transition:
+    opacity .7s ease,
+    transform .7s ease;
 }
 
 .js-reveal.is-visible {
   opacity: 1;
-  transform: translateY(0);
+
+  transform:
+    translateY(0);
 }
 
-/* Mouse tilt */
+
+/* ========================
+   JS mouse tilt
+   ======================== */
 
 .interactive-tilt {
-  transform-style: preserve-3d;
-  will-change: transform;
-  transition: transform 0.18s ease, box-shadow 0.28s ease;
+  transform-style:
+    preserve-3d;
+
+  will-change:
+    transform;
+
+  transition:
+    transform .18s ease,
+    box-shadow .28s ease;
 }
 
-/* Back to top */
+
+/* ========================
+   Back to top button
+   ======================== */
 
 .site-back-to-top {
   position: fixed;
+
   right: 22px;
   bottom: 22px;
+
   width: 44px;
   height: 44px;
+
   border: 0;
+
   border-radius: 50%;
-  background: #25593b;
+
+  background: #1f3b5b;
+
   color: #ffffff;
+
   cursor: pointer;
+
   z-index: 1200;
-  box-shadow: 0 12px 24px rgba(37, 89, 59, 0.24);
+
+  box-shadow:
+    0 10px 25px
+    rgba(31, 59, 91, .24);
+
   opacity: 0;
+
   visibility: hidden;
-  transform: translateY(10px);
-  transition: 0.25s ease;
+
+  transform:
+    translateY(10px);
+
+  transition:
+    .25s ease;
 }
 
 .site-back-to-top.show {
   opacity: 1;
+
   visibility: visible;
-  transform: translateY(0);
+
+  transform:
+    translateY(0);
 }
 
 .site-back-to-top:hover {
-  background: #2e7d32;
-  transform: translateY(-2px);
+  background: #1e88e5;
+
+  transform:
+    translateY(-2px);
 }
 
-/* Tablet */
+
+/* ========================
+   Tablet
+   ======================== */
 
 @media (max-width: 900px) {
+
   .sakura-feature-card {
-    grid-template-columns: 1fr;
+    grid-template-columns:
+      1fr;
   }
 
   .sakura-feature-image,
   .sakura-feature-image img {
-    min-height: 320px;
+    min-height: 300px;
   }
 
   .sakura-feature-content {
-    padding: 28px 24px;
-  }
-
-  .sakura-feature-title {
-    font-size: 28px;
+    padding:
+      26px 22px;
   }
 }
 
-/* Mobile */
+
+/* ========================
+   Mobile
+   ======================== */
 
 @media (max-width: 576px) {
+
   .sakura-feature-image,
   .sakura-feature-image img {
-    min-height: 270px;
+    min-height: 250px;
   }
 
   .sakura-feature-title {
-    font-size: 24px;
+    font-size: 22px;
   }
 
   .sakura-feature-text {
-    font-size: 15px;
-  }
-
-  .sakura-feature-content {
-    padding: 24px 18px;
+    font-size: 14px;
   }
 }
 
-@media (prefers-reduced-motion: reduce) {
+
+/* Accessibility */
+
+@media (
+  prefers-reduced-motion: reduce
+) {
+
   .js-reveal {
     opacity: 1;
+
     transform: none;
+
     transition: none;
   }
 
   .interactive-tilt,
   .sakura-feature-image img,
   .sakura-feature-action {
-    transition: none !important;
+    transition:
+      none !important;
   }
 }
