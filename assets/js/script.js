@@ -17,20 +17,12 @@ fetch("assets/experience_academic_bio/experience_academic_bio.html")
   });
 
 function preparePortfolioStructure() {
-  /*
-    Existing HTML file manually edit না করেই
-    Research এবং Publications section-এর working ID তৈরি।
-  */
   const researchSection = document.querySelector(".research-page-section");
   const publicationsSection = document.querySelector(".publications-section");
 
   if (researchSection) researchSection.id = "research";
   if (publicationsSection) publicationsSection.id = "publications";
 
-  /*
-    Existing dead menu links remove করে
-    শুধু working professional navigation রাখা হচ্ছে।
-  */
   const nav = document.querySelector(".nav-links");
 
   if (nav) {
@@ -39,23 +31,30 @@ function preparePortfolioStructure() {
       <a href="#research">Research</a>
       <a href="#publications">Publications</a>
       <a href="sakura-exchange.html">Sakura Exchange</a>
+      <a href="certificates.html">Certificates</a>
     `;
   }
 
   /*
-    Existing Download CV button-এর real CV file এখন নেই।
-    তাই আপাতত এটাকে Sakura-এর strong CTA বানানো হচ্ছে।
+    CV PDF তুমি পরে দিলে এখানে actual file link বসাব।
+    আপাতত button-এর নাম ঠিক থাকবে, কিন্তু click করলে
+    কোনো broken page খুলবে না।
   */
   const topButton = document.querySelector(".cv-btn");
 
   if (topButton) {
-    topButton.href = "sakura-exchange.html";
-    topButton.textContent = "Explore Sakura Journey";
+    topButton.href = "#";
+    topButton.textContent = "Download My CV";
+    topButton.setAttribute("aria-disabled", "true");
+    topButton.setAttribute("title", "CV PDF will be linked here soon");
+
+    topButton.addEventListener("click", (event) => {
+      event.preventDefault();
+    });
   }
 
   /*
-    Research Interests-এর ঠিক পরে
-    Sakura Science Featured Section automatically তৈরি।
+    Existing Sakura section exactly আগের মতো থাকবে।
   */
   const researchInterests = document.querySelector(".research-section");
 
@@ -142,10 +141,6 @@ function preparePortfolioStructure() {
     );
   }
 
-  /*
-    Existing Research section-এর Sakura card-এর নিচেও
-    dedicated journey link automatically যোগ হবে।
-  */
   document
     .querySelectorAll(".research-card")
     .forEach((card) => {
@@ -182,13 +177,17 @@ function initializePortfolioInteractions() {
     "(hover: hover) and (pointer: fine)"
   ).matches;
 
-  /*
-    Smooth scrolling
-  */
   document
     .querySelectorAll('a[href^="#"]')
     .forEach((link) => {
       link.addEventListener("click", (event) => {
+
+        if (
+          link.getAttribute("aria-disabled") === "true"
+        ) {
+          return;
+        }
+
         const href = link.getAttribute("href");
 
         if (!href || href === "#") return;
@@ -206,9 +205,6 @@ function initializePortfolioInteractions() {
       });
     });
 
-  /*
-    Scroll reveal
-  */
   const revealItems = document.querySelectorAll(
     ".bio-section, " +
       ".research-section, " +
@@ -251,9 +247,6 @@ function initializePortfolioInteractions() {
     );
   }
 
-  /*
-    Active navigation
-  */
   const navLinks = [
     ...document.querySelectorAll(
       ".nav-links a[href^='#']"
@@ -307,11 +300,6 @@ function initializePortfolioInteractions() {
     );
   }
 
-  /*
-    Cursor tilt effect
-    Desktop mouse-এ কাজ করবে।
-    Mobile-এ automatically off থাকবে।
-  */
   if (finePointer && !reduceMotion) {
     const tiltCards =
       document.querySelectorAll(
@@ -361,9 +349,6 @@ function initializePortfolioInteractions() {
       );
     });
 
-    /*
-      Sakura card cursor-following spotlight
-    */
     const sakuraCard =
       document.querySelector(
         ".sakura-feature-card"
@@ -393,9 +378,6 @@ function initializePortfolioInteractions() {
       );
     }
 
-    /*
-      Main Sakura button magnetic response
-    */
     document
       .querySelectorAll(".magnetic-link")
       .forEach((button) => {
@@ -432,9 +414,6 @@ function initializePortfolioInteractions() {
       });
   }
 
-  /*
-    Back to top button
-  */
   const backToTop =
     document.createElement("button");
 
